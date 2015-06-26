@@ -1,0 +1,3914 @@
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+/*
+- Colours
+- Fonts
+- Mixins
+- Reset Styles
+- Body
+- Links
+- Images
+- Lists
+- Paragraphs
+- Headers
+- Banner
+- Main Menu
+- Callouts
+- Pages
+- Sidebars
+- Footer
+
+
+*/
+/* Main Text Color*/
+/* Button Style */
+/* Alt Button Style */
+div.panel {
+  background: none !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  filter: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 400;
+  background: url(../../images/bg-body.jpg) repeat;
+  font-size: 100%;
+  color: #000000;
+  line-height: 1.5em;
+}
+::selection {
+  background: #f05a40;
+  color: white;
+}
+::-moz-selection {
+  background: #f05a40;
+  color: white;
+}
+iframe {
+  max-width: 100%;
+}
+a,
+a:hover {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+/* Standard Links */
+a {
+  color: #f05a40;
+  text-decoration: underline;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #f05a40;
+  text-decoration: none;
+}
+/* Image Link Opacity */
+a img {
+  border: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+a:hover img {
+  opacity: 0.6;
+}
+/* Button Links */
+a.button {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  /* Font Settings */
+
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: .875em;
+  color: white;
+  text-decoration: none;
+  /* Background color and Gradient and Border */
+
+  background: url(../../images/bg-button-orange.png) repeat;
+  border: none;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: center;
+  min-width: 150px;
+  /* Corners, Borders, and Padding */
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 5px  25px;
+  line-height: 24px;
+}
+a.button:hover {
+  color: white;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+a.button:active {
+  top: 2px;
+}
+a.button.secondary {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  /* Font Settings */
+
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: .875em;
+  color: white;
+  text-decoration: none;
+  /* Background color and Gradient and Border */
+
+  background: url(../../images/bg-button-orange.png) repeat;
+  border: none;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: center;
+  min-width: 150px;
+  /* Corners, Borders, and Padding */
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 5px  25px;
+  line-height: 24px;
+  background: url(../../images/bg-button-gray.png) repeat;
+}
+a.button.secondary:hover {
+  color: white;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+a.button.secondary:active {
+  top: 2px;
+}
+a.button.secondary:hover {
+  background: url(../../images/bg-button-orange.png) repeat;
+}
+a.button.green {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  /* Font Settings */
+
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: .875em;
+  color: white;
+  text-decoration: none;
+  /* Background color and Gradient and Border */
+
+  background: url(../../images/bg-button-orange.png) repeat;
+  border: none;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: center;
+  min-width: 150px;
+  /* Corners, Borders, and Padding */
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 5px  25px;
+  line-height: 24px;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+a.button.green:hover {
+  color: white;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+a.button.green:active {
+  top: 2px;
+}
+a.button.green:hover {
+  background: url(../../images/bg-button-gray.png) repeat;
+}
+.time-link {
+  display: block;
+}
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a img.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+a img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Main List Style */
+ul {
+  list-style: url(../../images/bullet.png);
+  margin-left: 15px;
+}
+ul li {
+  margin-bottom: 0px;
+}
+ul li a {
+  text-decoration: none;
+}
+ul.menu {
+  list-style: none;
+}
+ul.menu li {
+  display: inline;
+}
+ul.menu li a {
+  text-decoration: none;
+}
+ul.menu li:before {
+  content: none;
+}
+p {
+  padding-bottom: 15px;
+  margin: 0;
+  line-height: 1.7em;
+  font-size: 0.975em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-variant-ligatures: common-ligatures;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+}
+h1 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #f05a40;
+  line-height: 1em;
+  font-size: 2.500em;
+  padding-bottom: 25px;
+  margin: 0;
+}
+h1 a {
+  color: #f05a40;
+}
+h1 a:hover {
+  color: #515156;
+}
+h2 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #f05a40;
+  line-height: 1em;
+  font-size: 1.875em;
+  margin: 0;
+}
+h2 a {
+  color: #f05a40;
+}
+h2 a:hover {
+  color: #515156;
+}
+h3 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #f05a40;
+  line-height: 1em;
+  font-size: 1.188em;
+  margin: 0;
+}
+h3 a {
+  color: #f05a40;
+}
+h3 a:hover {
+  color: #515156;
+}
+h4 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  color: black ;
+  font-size: 1.188em;
+  margin: 0;
+  line-height: 1.2em;
+}
+h4 a {
+  color: black;
+  text-decoration: none;
+}
+h4 a:hover {
+  color: #f05a40;
+}
+h5,
+h6 {
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  color: #cfcfcf;
+  font-size: 1.250em;
+  margin: 0;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+h5 a,
+h6 a {
+  color: black;
+  text-decoration: none;
+}
+h5 a:hover,
+h6 a:hover {
+  color: #f05a40;
+}
+.art-and {
+  font-family: "daniel", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+form {
+  margin: 0;
+}
+div.gform_wrapper {
+  margin: 0;
+}
+div.gform_wrapper li:before {
+  content: none;
+}
+div.gform_wrapper img {
+  width: auto;
+}
+div.gform_wrapper .gform_heading {
+  margin-bottom: 0;
+}
+div.gform_wrapper h3.gform_title {
+  margin: 0;
+}
+div.gform_wrapper .top_label .gfield_label {
+  font-weight: 700;
+  font-size: 0.9375em;
+}
+div.gform_wrapper .top_label .gfield_label .gfield_required {
+  color: red;
+}
+div.gform_wrapper input.input-text,
+div.gform_wrapper textarea,
+div.gform_wrapper select {
+  margin-bottom: 0;
+}
+div.gform_wrapper .gform_footer {
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+div.gform_wrapper .gform_footer input.button,
+div.gform_wrapper .gform_footer input[type="submit"] {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  /* Font Settings */
+
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: .875em;
+  color: white;
+  text-decoration: none;
+  /* Background color and Gradient and Border */
+
+  background: url(../../images/bg-button-orange.png) repeat;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: center;
+  min-width: 150px;
+  /* Corners, Borders, and Padding */
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 5px  25px;
+  line-height: 24px;
+  background: #f05a40;
+  box-shadow: none;
+  border: none;
+  padding: 5px 25px;
+}
+div.gform_wrapper .gform_footer input.button:hover,
+div.gform_wrapper .gform_footer input[type="submit"]:hover {
+  color: white;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+div.gform_wrapper .gform_footer input.button:active,
+div.gform_wrapper .gform_footer input[type="submit"]:active {
+  top: 2px;
+}
+.gform_wrapper form .gform_footer {
+  margin: 10px 0 0;
+  padding: 0;
+}
+form label {
+  color: ;
+  text-transform: uppercase;
+}
+form input[type="text"],
+form input[type="url"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="password"],
+form textarea {
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-size: 1em !important;
+  background: #171717;
+  color: #cfcfcf;
+  border: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* Drop Shadow and Inset Shadow. */
+  -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 1px, inset rgba(0, 0, 0, 0.36) 0 2px 3px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 1px, inset rgba(0, 0, 0, 0.36) 0 2px 3px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 1px, inset rgba(0, 0, 0, 0.36) 0 2px 3px;
+  padding: 10px 10px !important;
+  width: 90% ;
+}
+form input[type=submit] {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  /* Font Settings */
+
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: .875em;
+  color: white;
+  text-decoration: none;
+  /* Background color and Gradient and Border */
+
+  background: url(../../images/bg-button-orange.png) repeat;
+  border: none;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: center;
+  min-width: 150px;
+  /* Corners, Borders, and Padding */
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 5px  25px;
+  line-height: 24px;
+}
+form input[type=submit]:hover {
+  color: white;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+form input[type=submit]:active {
+  top: 2px;
+}
+div.header.top > .row {
+  position: relative;
+}
+div.header.top .search-box {
+  left: 175px;
+  margin-top: 10px;
+  position: absolute;
+  top: 55px;
+  z-index: 500;
+}
+div.header.top .search-box #searchsubmit {
+  line-height: 18px;
+}
+div.header.top form label {
+  color: ;
+  text-transform: uppercase;
+}
+div.header.top form input[type="text"],
+div.header.top form input[type="url"],
+div.header.top form input[type="email"],
+div.header.top form input[type="tel"],
+div.header.top form input[type="number"],
+div.header.top form input[type="password"],
+div.header.top form textarea {
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-size: 1em !important;
+  background: #171717;
+  color: black;
+  border: #cfcfcf;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* Drop Shadow and Inset Shadow. */
+  background: none;
+  box-shadow: 0;
+  padding: 10px 10px !important;
+  width: 20% ;
+  margin-right: 15px;
+  float: left;
+  min-width: 100px;
+}
+div.header.top form input[type=submit] {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  /* Font Settings */
+
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: .875em;
+  color: white;
+  text-decoration: none;
+  /* Background color and Gradient and Border */
+
+  background: url(../../images/bg-button-orange.png) repeat;
+  border: none;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: center;
+  min-width: 150px;
+  /* Corners, Borders, and Padding */
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 5px  25px;
+  line-height: 24px;
+  min-width: 80px;
+}
+div.header.top form input[type=submit]:hover {
+  color: white;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+div.header.top form input[type=submit]:active {
+  top: 2px;
+}
+.search article {
+  margin-bottom: 75px;
+}
+div.header.top {
+  background: #f4f4f2 url(../../images/bg-header.jpg) no-repeat center bottom;
+  padding-top: 9px;
+}
+div.header.top .phone {
+  color: #f05a40;
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125em;
+  padding-top: 25px;
+}
+div.header.top .logo {
+  width: 17.66%;
+}
+div.header.top .nine.columns {
+  width: 82.333%;
+}
+div.header.top .top-menu {
+  margin-top: 20px;
+  background: #ececeb;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ececeb), color-stop(1, #fbfafa));
+  background: -ms-linear-gradient(bottom, #ececeb, #fbfafa);
+  background: -moz-linear-gradient(center bottom, #ececeb 0%, #fbfafa 100%);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 0;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+div.header.top .top-menu ul {
+  margin: 0;
+  text-align: center;
+}
+div.header.top .top-menu ul li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  padding: 5px 2.5px;
+}
+div.header.top .top-menu ul li a {
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  color: #515156;
+  font-size: 0.857em;
+}
+div.header.top .top-menu ul li a:hover {
+  color: #f05a40;
+}
+div.header.top .top-menu ul li + li:before {
+  padding: 0 5px;
+  content: " | ";
+  font-weight: 100;
+}
+div.header.top #main-nav {
+  max-height: 42px;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 1.08em;
+  text-decoration: none;
+  text-align: right;
+  width: 100%;
+  height: auto;
+}
+div.header.top #main-nav > li {
+  float: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  padding: 10px 0;
+  top: 0;
+  vertical-align: top;
+  padding-right: 40px;
+}
+div.header.top #main-nav > li > a {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #515156;
+  padding: 0;
+}
+div.header.top #main-nav > li > a:hover {
+  border-bottom: solid 3px #f05a40;
+}
+div.header.top #main-nav > li:last-of-type {
+  padding-right: 0px;
+}
+div.header.top #main-nav > li:hover > a {
+  border-bottom: solid 3px #f05a40;
+}
+div.header.top #main-nav > li.current-menu-item a,
+div.header.top #main-nav > li.current-page-ancestor a {
+  color: #f05a40;
+}
+div.header.top #main-nav > li:nth-of-type(1) .sub-menu li,
+div.header.top #main-nav > li:nth-of-type(4) .sub-menu li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  width: 49%;
+  margin-right: 7%;
+}
+div.header.top #main-nav > li:nth-of-type(1) .sub-menu li:nth-of-type(even),
+div.header.top #main-nav > li:nth-of-type(4) .sub-menu li:nth-of-type(even) {
+  width: 42%;
+  margin: 0;
+}
+div.header.top #main-nav > li:nth-of-type(1) .sub-menu li a,
+div.header.top #main-nav > li:nth-of-type(4) .sub-menu li a {
+  padding: 5px 0;
+  text-transform: none;
+  width: 100%;
+}
+div.header.top #main-nav > li:nth-of-type(1) .sub-menu {
+  width: 540px;
+}
+div.header.top #main-nav > li:nth-of-type(4) .sub-menu {
+  width: 440px;
+}
+div.header.top #main-nav > li:last-of-type .sub-menu {
+  width: 240px;
+}
+div.header.top #main-nav .sub-menu {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: left;
+  background: url(../../images/bg-sub-menu.png) repeat;
+  width: 300px;
+}
+div.header.top #main-nav .sub-menu li a {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  padding: 5px 10px;
+  font-size: .875em;
+  color: #515156;
+  display: block;
+  width: 100%;
+}
+div.header.top #main-nav .sub-menu li a:hover {
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 500;
+  border: none;
+  background: none  ;
+  color: #f05a40;
+}
+div.header.top #main-nav li ul li,
+div.header.top #main-nav li ul li a {
+  text-decoration: none !important;
+}
+#top-nav .sub-menu {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  padding: 10px;
+  text-align: left;
+  background: url(../../images/bg-sub-menu.png) repeat;
+  width: 300px;
+  display: none;
+}
+#top-nav .sub-menu li a {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  padding: 5px 10px;
+  font-size: .875em;
+  color: #515156;
+  display: block;
+  width: 100%;
+}
+#top-nav .sub-menu li a:hover {
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 500;
+  border: none;
+  background: none  ;
+  color: #f05a40;
+}
+#skip-to-menu {
+  display: none;
+}
+.featured {
+  overflow: hidden;
+}
+.flexslider {
+  position: relative;
+}
+.flexslider .slides li .slider-text,
+.flexslider .slides li .slider-vid {
+  position: absolute;
+  z-index: 5;
+}
+.flexslider .slides li .slider-text h3,
+.flexslider .slides li .slider-vid h3 {
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2.143em;
+  color: white;
+  /*background:#4c4c4c;*/
+
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  padding-right: 25px;
+}
+.flexslider .slides li .slider-text p,
+.flexslider .slides li .slider-vid p {
+  /*background: #4c4c4c;*/
+
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  color: white;
+  font-size: 1.125em;
+  padding-bottom: 0;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  text-align: left;
+}
+.flexslider .slides li .slider-text a.button,
+.flexslider .slides li .slider-vid a.button {
+  margin-top: 25px;
+  margin-right: 15px;
+}
+.flexslider .slides li .slider-text {
+  left: 45%;
+  top: 108px;
+}
+.flexslider .slides li .slider-vid {
+  left: 17%;
+  top: 10px;
+}
+.flexslider .flex-control-nav {
+  position: relative;
+  bottom: 75px;
+  width: 980px;
+  margin: auto;
+  text-align: right;
+  margin-bottom: -39px;
+}
+.flexslider .flex-control-nav li a {
+  background: white;
+  color: #f05a40;
+  height: 40px;
+  padding: 10px 18px;
+  width: 40px;
+  text-decoration: none;
+}
+.flexslider .flex-control-nav li a.flex-active,
+.flexslider .flex-control-nav li a:hover {
+  background: #ea6e00;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ea6e00), color-stop(1, #e69228));
+  background: -ms-linear-gradient(bottom, #ea6e00, #e69228);
+  background: -moz-linear-gradient(center bottom, #ea6e00 0%, #e69228 100%);
+  color: white;
+}
+.page-template-page-management-training-php .welcome p,
+.page-template-page-homepage-php .welcome p,
+.page-template-page-homepage-original-php .welcome p,
+.home .welcome p {
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.375em;
+  color: black;
+}
+.page-template-page-management-training-php .callouts,
+.page-template-page-homepage-php .callouts,
+.home .callouts {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.page-template-page-management-training-php .callouts .four.columns,
+.page-template-page-homepage-php .callouts .four.columns,
+.home .callouts .four.columns {
+  margin-bottom: 15px;
+  min-height: 385px;
+}
+.page-template-page-management-training-php .callouts .four.columns a,
+.page-template-page-homepage-php .callouts .four.columns a,
+.home .callouts .four.columns a {
+  max-width: 100%;
+  display: block;
+}
+.page-template-page-management-training-php .callouts .four.columns a img,
+.page-template-page-homepage-php .callouts .four.columns a img,
+.home .callouts .four.columns a img {
+  max-width: 100%;
+}
+.page-template-page-management-training-php .callouts .four.columns img,
+.page-template-page-homepage-php .callouts .four.columns img,
+.home .callouts .four.columns img {
+  padding-bottom: 15px;
+}
+.page-template-page-management-training-php .callouts .four.columns h3,
+.page-template-page-homepage-php .callouts .four.columns h3,
+.home .callouts .four.columns h3,
+.page-template-page-management-training-php .callouts .four.columns p,
+.page-template-page-homepage-php .callouts .four.columns p,
+.home .callouts .four.columns p {
+  padding: 0 15px;
+  padding-bottom: 15px;
+}
+.page-template-page-management-training-php .callouts .four.columns a,
+.page-template-page-homepage-php .callouts .four.columns a,
+.home .callouts .four.columns a {
+  margin-left: 15px;
+}
+.page-template-page-management-training-php .callouts .four.columns:nth-of-type(3n+1),
+.page-template-page-homepage-php .callouts .four.columns:nth-of-type(3n+1),
+.home .callouts .four.columns:nth-of-type(3n+1) {
+  clear: both;
+}
+.page-template-page-management-training-php .callouts .four.columns:last-child,
+.page-template-page-homepage-php .callouts .four.columns:last-child,
+.home .callouts .four.columns:last-child {
+  float: left;
+}
+.page-template-page-management-training-php .featured,
+.page-template-page-homepage-php .featured,
+.home .featured {
+  background: url(../../images/bg-divider.jpg) no-repeat center bottom;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+.page-template-page-management-training-php .bestseller,
+.page-template-page-homepage-php .bestseller,
+.home .bestseller {
+  background: #ffffff url(../../images/bg-books.jpg) no-repeat top left;
+  border: solid 1px #c4c4c4;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 55px;
+  margin-top: 50px;
+}
+.page-template-page-management-training-php .bestseller h2,
+.page-template-page-homepage-php .bestseller h2,
+.home .bestseller h2 {
+  margin-bottom: 75px;
+}
+.page-template-page-management-training-php .bestseller h4,
+.page-template-page-homepage-php .bestseller h4,
+.home .bestseller h4 {
+  padding-bottom: 15px;
+}
+.page-template-page-management-training-php .bestseller .row,
+.page-template-page-homepage-php .bestseller .row,
+.home .bestseller .row {
+  padding-left: 25px;
+}
+.page-template-page-management-training-php .bestseller .row p,
+.page-template-page-homepage-php .bestseller .row p,
+.home .bestseller .row p {
+  padding-bottom: 25px;
+}
+.page-template-page-management-training-php .bestseller .row a.button,
+.page-template-page-homepage-php .bestseller .row a.button,
+.home .bestseller .row a.button {
+  margin-right: 10px;
+}
+.page-template-page-management-training-php .recent-blog,
+.page-template-page-homepage-php .recent-blog,
+.home .recent-blog {
+  background: #ffffff url(../../images/bg-blog.jpg) no-repeat top left;
+  border: solid 1px #c4c4c4;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 450px;
+  padding: 55px;
+  margin-top: 50px;
+}
+.page-template-page-management-training-php .recent-blog h2,
+.page-template-page-homepage-php .recent-blog h2,
+.home .recent-blog h2 {
+  margin-bottom: 10px;
+}
+.page-template-page-management-training-php .recent-blog h4,
+.page-template-page-homepage-php .recent-blog h4,
+.home .recent-blog h4 {
+  padding-bottom: 15px;
+}
+.page-template-page-management-training-php .recent-blog .row,
+.page-template-page-homepage-php .recent-blog .row,
+.home .recent-blog .row {
+  padding-left: 25px;
+}
+.page-template-page-management-training-php .recent-blog .row a.button,
+.page-template-page-homepage-php .recent-blog .row a.button,
+.home .recent-blog .row a.button {
+  margin-right: 10px;
+}
+.page-template-page-management-training-php .recent-blog .five.columns,
+.page-template-page-homepage-php .recent-blog .five.columns,
+.home .recent-blog .five.columns {
+  left: 25px;
+  top: 20px;
+}
+.page-template-page-management-training-php .recent-blog .flexslider:hover .flex-prev,
+.page-template-page-homepage-php .recent-blog .flexslider:hover .flex-prev,
+.home .recent-blog .flexslider:hover .flex-prev {
+  left: -36px;
+}
+.page-template-page-management-training-php .recent-blog .flexslider:hover .flex-next,
+.page-template-page-homepage-php .recent-blog .flexslider:hover .flex-next,
+.home .recent-blog .flexslider:hover .flex-next {
+  right: -85px;
+}
+.page-template-page-management-training-php .recent-blog .flexslider .flex-control-nav,
+.page-template-page-homepage-php .recent-blog .flexslider .flex-control-nav,
+.home .recent-blog .flexslider .flex-control-nav {
+  display: none;
+}
+.page-template-page-management-training-php .recent-blog .flexslider .flex-direction-nav,
+.page-template-page-homepage-php .recent-blog .flexslider .flex-direction-nav,
+.home .recent-blog .flexslider .flex-direction-nav {
+  position: absolute;
+  right: 106px;
+  top: 25px;
+}
+.page-template-page-management-training-php .recent-blog .flexslider .flex-direction-nav a,
+.page-template-page-homepage-php .recent-blog .flexslider .flex-direction-nav a,
+.home .recent-blog .flexslider .flex-direction-nav a {
+  background: url("../../images/bg_direction_nav.png") no-repeat scroll 0 0 transparent;
+  opacity: 0.8;
+  width: 85px;
+}
+.page-template-page-management-training-php .recent-blog .flexslider .flex-direction-nav a.flex-prev,
+.page-template-page-homepage-php .recent-blog .flexslider .flex-direction-nav a.flex-prev,
+.home .recent-blog .flexslider .flex-direction-nav a.flex-prev {
+  left: -85px;
+}
+.page-template-page-management-training-php .recent-blog .flexslider .flex-direction-nav a.flex-next,
+.page-template-page-homepage-php .recent-blog .flexslider .flex-direction-nav a.flex-next,
+.home .recent-blog .flexslider .flex-direction-nav a.flex-next {
+  background-position: 100% 0;
+  right: -85px;
+}
+#main[role=main] {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+#main[role=main] h1 {
+  padding-bottom: 40px;
+}
+#main[role=main] h1 p {
+  margin-bottom: -20px;
+  padding-bottom: 0;
+}
+
+.archive #main[role=main] .hentry {
+	margin-bottom: 40px;
+}
+
+.archive #main[role=main] .hentry hr {
+	margin: 0 0 20px;
+}
+
+.blog #content.row,
+.page-template-default #content.row,
+.single #content.row,
+.archive #content.row,
+.search #content.row {
+  margin-top: 75px;
+}
+.blog #main[role=main],
+.page-template-default #main[role=main],
+.single #main[role=main],
+.archive #main[role=main],
+.search #main[role=main] {
+  margin-top: 0;
+}
+.page-template-page-module-v-php .type-page,
+.page-template-page-organization-php .type-page,
+.page-template-page-organizations-php .type-page,
+.page-template-page-organizations-landing-php .type-page,
+.page-template-page-dropdown-list-php .type-page,
+.page-template-page-new-calendar-php .type-page {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+.page-template-page-organization-php .type-page .attachment-page-feature,
+.page-template-page-organizations-php .type-page .attachment-page-feature,
+.page-template-page-organizations-landing-php .type-page .attachment-page-feature,
+.page-template-page-dropdown-list-php .type-page .attachment-page-feature,
+.page-template-page-new-calendar-php .type-page .attachment-page-feature {
+  width: 100%;
+}
+.page-template-page-organization-php .type-page .post_content,
+.page-template-page-organizations-php .type-page .post_content,
+.page-template-page-organizations-landing-php .type-page .post_content,
+.page-template-page-dropdown-list-php .type-page .post_content,
+.page-template-page-new-calendar-php .type-page .post_content {
+  border: solid 1px #e2e2e2;
+  background: white;
+  padding-bottom: 50px;
+}
+.page-template-page-organization-php .type-page .post_content .the-content,
+.page-template-page-organizations-php .type-page .post_content .the-content,
+.page-template-page-organizations-landing-php .type-page .post_content .the-content,
+.page-template-page-dropdown-list-php .type-page .post_content .the-content,
+.page-template-page-new-calendar-php .type-page .post_content .the-content {
+  padding: 0 80px;
+}
+.page-template-page-organization-php .type-page .post_content p,
+.page-template-page-organizations-php .type-page .post_content p,
+.page-template-page-organizations-landing-php .type-page .post_content p,
+.page-template-page-dropdown-list-php .type-page .post_content p,
+.page-template-page-new-calendar-php .type-page .post_content p {
+  padding-bottom: 20px;
+}
+.page-template-page-organization-php .type-page .post_content h2,
+.page-template-page-organizations-php .type-page .post_content h2,
+.page-template-page-organizations-landing-php .type-page .post_content h2,
+.page-template-page-dropdown-list-php .type-page .post_content h2,
+.page-template-page-new-calendar-php .type-page .post_content h2 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 25px;
+}
+.page-template-page-organization-php .type-page .post_content strong,
+.page-template-page-organizations-php .type-page .post_content strong,
+.page-template-page-organizations-landing-php .type-page .post_content strong,
+.page-template-page-dropdown-list-php .type-page .post_content strong,
+.page-template-page-new-calendar-php .type-page .post_content strong {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.175em;
+  color: #f05a40;
+  padding: 10px 0;
+  display: block;
+}
+.page-template-page-organization-php .type-page .post_content .post-list,
+.page-template-page-organizations-php .type-page .post_content .post-list,
+.page-template-page-organizations-landing-php .type-page .post_content .post-list,
+.page-template-page-dropdown-list-php .type-page .post_content .post-list,
+.page-template-page-new-calendar-php .type-page .post_content .post-list {
+  float: right;
+  margin-top: 50px;
+  padding-right: 75px;
+  text-align: left;
+  width: 375px;
+  font-size: 1.357em;
+}
+.page-template-page-organization-php .type-page .post_content .post-videos,
+.page-template-page-organizations-php .type-page .post_content .post-videos,
+.page-template-page-organizations-landing-php .type-page .post_content .post-videos,
+.page-template-page-dropdown-list-php .type-page .post_content .post-videos,
+.page-template-page-new-calendar-php .type-page .post_content .post-videos {
+  float: left;
+  padding-left: 75px;
+  margin-top: 50px;
+  width: 300px;
+}
+.page-template-page-organization-php .type-page .post_content .dropdown-content,
+.page-template-page-organizations-php .type-page .post_content .dropdown-content,
+.page-template-page-organizations-landing-php .type-page .post_content .dropdown-content,
+.page-template-page-dropdown-list-php .type-page .post_content .dropdown-content,
+.page-template-page-new-calendar-php .type-page .post_content .dropdown-content {
+  margin-bottom: 20px;
+}
+.page-template-page-organization-php .type-page .post_content .dropdown-content h3,
+.page-template-page-organizations-php .type-page .post_content .dropdown-content h3,
+.page-template-page-organizations-landing-php .type-page .post_content .dropdown-content h3,
+.page-template-page-dropdown-list-php .type-page .post_content .dropdown-content h3,
+.page-template-page-new-calendar-php .type-page .post_content .dropdown-content h3 {
+  padding-bottom: 20px;
+}
+.page-template-page-organization-php .type-page .post_content .dropdown-content:first-of-type,
+.page-template-page-organizations-php .type-page .post_content .dropdown-content:first-of-type,
+.page-template-page-organizations-landing-php .type-page .post_content .dropdown-content:first-of-type,
+.page-template-page-dropdown-list-php .type-page .post_content .dropdown-content:first-of-type,
+.page-template-page-new-calendar-php .type-page .post_content .dropdown-content:first-of-type {
+  margin-top: 20px;
+}
+.page-template-page-organization-php .type-page .post_content .gform_wrapper,
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper,
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper,
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper,
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper {
+  max-width: 53%;
+}
+.page-template-page-organization-php .type-page .post_content .gform_wrapper input[type="text"],
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper input[type="text"],
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper input[type="text"],
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper input[type="text"],
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper input[type="text"],
+.page-template-page-organization-php .type-page .post_content .gform_wrapper input[type="url"],
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper input[type="url"],
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper input[type="url"],
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper input[type="url"],
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper input[type="url"],
+.page-template-page-organization-php .type-page .post_content .gform_wrapper input[type="email"],
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper input[type="email"],
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper input[type="email"],
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper input[type="email"],
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper input[type="email"],
+.page-template-page-organization-php .type-page .post_content .gform_wrapper input[type="tel"],
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper input[type="tel"],
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper input[type="tel"],
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper input[type="tel"],
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper input[type="tel"],
+.page-template-page-organization-php .type-page .post_content .gform_wrapper input[type="number"],
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper input[type="number"],
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper input[type="number"],
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper input[type="number"],
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper input[type="number"],
+.page-template-page-organization-php .type-page .post_content .gform_wrapper input[type="password"],
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper input[type="password"],
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper input[type="password"],
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper input[type="password"],
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper input[type="password"],
+.page-template-page-organization-php .type-page .post_content .gform_wrapper textarea,
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper textarea,
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper textarea,
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper textarea,
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper textarea {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-size: .875em !important;
+  background: white;
+  color: #515156;
+  border: 1px solid #90991b;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* Drop Shadow and Inset Shadow. */
+  -webkit-box-shadow: #90991b 0 0px 4px;
+  -moz-box-shadow: #90991b 0 0px 4px;
+  box-shadow: #90991b 0 0px 4px;
+  padding: 10px 10px !important;
+}
+.page-template-page-organization-php .type-page .post_content .gform_wrapper input[type=submit],
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper input[type=submit],
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper input[type=submit],
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper input[type=submit],
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper input[type=submit] {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  /* Font Settings */
+
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: .875em;
+  color: white;
+  text-decoration: none;
+  /* Background color and Gradient and Border */
+
+  background: url(../../images/bg-button-orange.png) repeat;
+  border: none;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: center;
+  min-width: 150px;
+  /* Corners, Borders, and Padding */
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 5px  25px;
+  line-height: 24px;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+.page-template-page-organization-php .type-page .post_content .gform_wrapper input[type=submit]:hover,
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper input[type=submit]:hover,
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper input[type=submit]:hover,
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper input[type=submit]:hover,
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper input[type=submit]:hover {
+  color: white;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+.page-template-page-organization-php .type-page .post_content .gform_wrapper input[type=submit]:active,
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper input[type=submit]:active,
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper input[type=submit]:active,
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper input[type=submit]:active,
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper input[type=submit]:active {
+  top: 2px;
+}
+.page-template-page-organization-php .type-page .post_content .gform_wrapper input[type=submit]:hover,
+.page-template-page-organizations-php .type-page .post_content .gform_wrapper input[type=submit]:hover,
+.page-template-page-organizations-landing-php .type-page .post_content .gform_wrapper input[type=submit]:hover,
+.page-template-page-dropdown-list-php .type-page .post_content .gform_wrapper input[type=submit]:hover,
+.page-template-page-new-calendar-php .type-page .post_content .gform_wrapper input[type=submit]:hover {
+  background: url(../../images/bg-button-gray.png) repeat;
+}
+.page-template-page-organization-php .type-page .post_content .read-more,
+.page-template-page-organizations-php .type-page .post_content .read-more,
+.page-template-page-organizations-landing-php .type-page .post_content .read-more,
+.page-template-page-dropdown-list-php .type-page .post_content .read-more,
+.page-template-page-new-calendar-php .type-page .post_content .read-more {
+  margin-bottom: 25px;
+}
+.page-template-page-organization-php .type-page .featured-text,
+.page-template-page-organizations-php .type-page .featured-text,
+.page-template-page-organizations-landing-php .type-page .featured-text,
+.page-template-page-dropdown-list-php .type-page .featured-text,
+.page-template-page-new-calendar-php .type-page .featured-text {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px 80px 25px;
+}
+.page-id-36 .type-page .post_content {
+  padding-top: 50px;
+  background: #ffffff url(../../images/bg-contact.jpg) no-repeat right 70%;
+}
+.page-id-36 .type-page .post_content strong {
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.175em;
+  color: #f05a40;
+  padding: 10px 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin-left: 5px;
+}
+.page-id-36 .type-page .post_content .gform_wrapper {
+  max-width: 53%;
+}
+.page-id-36 .type-page .post_content .gform_wrapper label {
+  display: none;
+}
+.page-id-36 .type-page .post_content .gform_wrapper input[type="text"],
+.page-id-36 .type-page .post_content .gform_wrapper input[type="url"],
+.page-id-36 .type-page .post_content .gform_wrapper input[type="email"],
+.page-id-36 .type-page .post_content .gform_wrapper input[type="tel"],
+.page-id-36 .type-page .post_content .gform_wrapper input[type="number"],
+.page-id-36 .type-page .post_content .gform_wrapper input[type="password"],
+.page-id-36 .type-page .post_content .gform_wrapper textarea {
+  margin: 6px 0;
+}
+.page-template-page-business-php .reveal-modal,
+.page-template-page-coaching-php .reveal-modal,
+.page-template-page-coaching-online-php .reveal-modal {
+  width: 630px;
+  z-index: 5000;
+}
+.page-template-page-business-php .reveal-modal .close-reveal-modal,
+.page-template-page-coaching-php .reveal-modal .close-reveal-modal,
+.page-template-page-coaching-online-php .reveal-modal .close-reveal-modal {
+  background: url(../../images/pop-up-close.png) no-repeat center center;
+  height: 45px;
+  width: 45px;
+  overflow: hidden;
+  text-indent: -9999em;
+  top: 0;
+  right: 0;
+}
+.page-template-page-coaching-online-php #main[role=main],
+.page-template-page-tuition-php #main[role=main],
+.page-template-page-coaching-php #main[role=main],
+.page-template-page-geotarget-php #main[role=main],
+.page-template-page-passion-profit-php #main[role=main] {
+  padding: 0 20px;
+}
+.page-template-page-coaching-online-php .top-row,
+.page-template-page-tuition-php .top-row,
+.page-template-page-coaching-php .top-row,
+.page-template-page-geotarget-php .top-row,
+.page-template-page-passion-profit-php .top-row {
+  margin-bottom: 50px;
+  zoom: 1;
+}
+.page-template-page-coaching-online-php .top-row:before,
+.page-template-page-tuition-php .top-row:before,
+.page-template-page-coaching-php .top-row:before,
+.page-template-page-geotarget-php .top-row:before,
+.page-template-page-passion-profit-php .top-row:before {
+  content: '';
+  display: block;
+}
+.page-template-page-coaching-online-php .top-row:after,
+.page-template-page-tuition-php .top-row:after,
+.page-template-page-coaching-php .top-row:after,
+.page-template-page-geotarget-php .top-row:after,
+.page-template-page-passion-profit-php .top-row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.page-template-page-coaching-online-php .top-row .events,
+.page-template-page-tuition-php .top-row .events,
+.page-template-page-coaching-php .top-row .events,
+.page-template-page-geotarget-php .top-row .events,
+.page-template-page-passion-profit-php .top-row .events {
+  /*margin-left: 30px;
+			width: 30.233%;*/
+
+}
+.page-template-page-coaching-online-php .top-row .events h4,
+.page-template-page-tuition-php .top-row .events h4,
+.page-template-page-coaching-php .top-row .events h4,
+.page-template-page-geotarget-php .top-row .events h4,
+.page-template-page-passion-profit-php .top-row .events h4 {
+  color: #f05a40;
+  font-size: 1.429em;
+  margin-bottom: 20px;
+}
+.page-template-page-coaching-online-php .top-row .events li,
+.page-template-page-tuition-php .top-row .events li,
+.page-template-page-coaching-php .top-row .events li,
+.page-template-page-geotarget-php .top-row .events li,
+.page-template-page-passion-profit-php .top-row .events li {
+  margin: 0;
+  list-style: none;
+  margin-bottom: 20px;
+}
+.page-template-page-coaching-online-php .top-row .events a.button.green,
+.page-template-page-tuition-php .top-row .events a.button.green,
+.page-template-page-coaching-php .top-row .events a.button.green,
+.page-template-page-geotarget-php .top-row .events a.button.green,
+.page-template-page-passion-profit-php .top-row .events a.button.green {
+  margin-top: 10px;
+}
+.page-template-page-coaching-online-php .callouts,
+.page-template-page-tuition-php .callouts,
+.page-template-page-coaching-php .callouts,
+.page-template-page-geotarget-php .callouts,
+.page-template-page-passion-profit-php .callouts {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+}
+.page-template-page-coaching-online-php .callouts .callout,
+.page-template-page-tuition-php .callouts .callout,
+.page-template-page-coaching-php .callouts .callout,
+.page-template-page-geotarget-php .callouts .callout,
+.page-template-page-passion-profit-php .callouts .callout {
+  border-bottom: 1px solid #e2e2e2;
+  position: relative;
+  zoom: 1;
+}
+.page-template-page-coaching-online-php .callouts .callout:before,
+.page-template-page-tuition-php .callouts .callout:before,
+.page-template-page-coaching-php .callouts .callout:before,
+.page-template-page-geotarget-php .callouts .callout:before,
+.page-template-page-passion-profit-php .callouts .callout:before {
+  content: '';
+  display: block;
+}
+.page-template-page-coaching-online-php .callouts .callout:after,
+.page-template-page-tuition-php .callouts .callout:after,
+.page-template-page-coaching-php .callouts .callout:after,
+.page-template-page-geotarget-php .callouts .callout:after,
+.page-template-page-passion-profit-php .callouts .callout:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.page-template-page-coaching-online-php .callouts .callout .callout-image,
+.page-template-page-tuition-php .callouts .callout .callout-image,
+.page-template-page-coaching-php .callouts .callout .callout-image,
+.page-template-page-geotarget-php .callouts .callout .callout-image,
+.page-template-page-passion-profit-php .callouts .callout .callout-image {
+  float: left;
+}
+.page-template-page-coaching-online-php .callouts .callout .callout-image img,
+.page-template-page-tuition-php .callouts .callout .callout-image img,
+.page-template-page-coaching-php .callouts .callout .callout-image img,
+.page-template-page-geotarget-php .callouts .callout .callout-image img,
+.page-template-page-passion-profit-php .callouts .callout .callout-image img {
+  vertical-align: bottom;
+}
+.page-template-page-coaching-online-php .callouts .callout .callout-content,
+.page-template-page-tuition-php .callouts .callout .callout-content,
+.page-template-page-coaching-php .callouts .callout .callout-content,
+.page-template-page-geotarget-php .callouts .callout .callout-content,
+.page-template-page-passion-profit-php .callouts .callout .callout-content {
+  padding-top: 75px;
+  width: 450px;
+  float: right;
+  padding-right: 35px;
+}
+.page-template-page-coaching-online-php .callouts .callout .callout-content h2,
+.page-template-page-tuition-php .callouts .callout .callout-content h2,
+.page-template-page-coaching-php .callouts .callout .callout-content h2,
+.page-template-page-geotarget-php .callouts .callout .callout-content h2,
+.page-template-page-passion-profit-php .callouts .callout .callout-content h2 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2em;
+  color: black;
+  padding-bottom: 25px;
+}
+.page-template-page-coaching-online-php .callouts .callout .callout-content p,
+.page-template-page-tuition-php .callouts .callout .callout-content p,
+.page-template-page-coaching-php .callouts .callout .callout-content p,
+.page-template-page-geotarget-php .callouts .callout .callout-content p,
+.page-template-page-passion-profit-php .callouts .callout .callout-content p {
+  padding-left: 25px;
+}
+.page-template-page-coaching-online-php .callouts .callout.Tabs .callout-content,
+.page-template-page-tuition-php .callouts .callout.Tabs .callout-content,
+.page-template-page-coaching-php .callouts .callout.Tabs .callout-content,
+.page-template-page-geotarget-php .callouts .callout.Tabs .callout-content,
+.page-template-page-passion-profit-php .callouts .callout.Tabs .callout-content {
+  position: absolute;
+  right: -28px;
+  top: 75px;
+  width: 450px;
+}
+.page-template-page-coaching-online-php .callouts .callout:nth-of-type(even) .callout-image,
+.page-template-page-tuition-php .callouts .callout:nth-of-type(even) .callout-image,
+.page-template-page-coaching-php .callouts .callout:nth-of-type(even) .callout-image,
+.page-template-page-geotarget-php .callouts .callout:nth-of-type(even) .callout-image,
+.page-template-page-passion-profit-php .callouts .callout:nth-of-type(even) .callout-image {
+  float: right;
+}
+.page-template-page-coaching-online-php .callouts .callout:nth-of-type(even) .callout-content,
+.page-template-page-tuition-php .callouts .callout:nth-of-type(even) .callout-content,
+.page-template-page-coaching-php .callouts .callout:nth-of-type(even) .callout-content,
+.page-template-page-geotarget-php .callouts .callout:nth-of-type(even) .callout-content,
+.page-template-page-passion-profit-php .callouts .callout:nth-of-type(even) .callout-content {
+  float: left;
+  padding-right: 0;
+  padding-left: 50px;
+}
+.page-template-page-coaching-online-php .sub-callout,
+.page-template-page-tuition-php .sub-callout,
+.page-template-page-coaching-php .sub-callout,
+.page-template-page-geotarget-php .sub-callout,
+.page-template-page-passion-profit-php .sub-callout {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  padding: 50px 50px 10px 50px;
+}
+.page-template-page-coaching-online-php .sub-callout h2,
+.page-template-page-tuition-php .sub-callout h2,
+.page-template-page-coaching-php .sub-callout h2,
+.page-template-page-geotarget-php .sub-callout h2,
+.page-template-page-passion-profit-php .sub-callout h2 {
+  font-size: 2em;
+  color: black;
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.page-template-page-coaching-online-php .sub-callout p,
+.page-template-page-tuition-php .sub-callout p,
+.page-template-page-coaching-php .sub-callout p,
+.page-template-page-geotarget-php .sub-callout p,
+.page-template-page-passion-profit-php .sub-callout p {
+  padding: 0 75px;
+  text-align: center;
+}
+.page-template-page-coaching-online-php .sub-callout p em,
+.page-template-page-tuition-php .sub-callout p em,
+.page-template-page-coaching-php .sub-callout p em,
+.page-template-page-geotarget-php .sub-callout p em,
+.page-template-page-passion-profit-php .sub-callout p em {
+  font-size: 1.286em;
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  color: #f05a40;
+}
+.page-template-page-coaching-online-php .modules,
+.page-template-page-tuition-php .modules,
+.page-template-page-coaching-php .modules,
+.page-template-page-geotarget-php .modules,
+.page-template-page-passion-profit-php .modules {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white;
+  /*
+		border-left:1px solid #e2e2e2;
+		border-right:1px solid #e2e2e2;
+		padding:50px;
+				*/
+
+}
+.page-template-page-coaching-online-php .modules h3,
+.page-template-page-tuition-php .modules h3,
+.page-template-page-coaching-php .modules h3,
+.page-template-page-geotarget-php .modules h3,
+.page-template-page-passion-profit-php .modules h3 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 700;
+  color: black;
+  font-size: 1.143em;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+.page-template-page-coaching-online-php .modules article,
+.page-template-page-tuition-php .modules article,
+.page-template-page-coaching-php .modules article,
+.page-template-page-geotarget-php .modules article,
+.page-template-page-passion-profit-php .modules article {
+  margin-bottom: 50px;
+}
+.page-template-page-coaching-online-php .modules a.button,
+.page-template-page-tuition-php .modules a.button,
+.page-template-page-coaching-php .modules a.button,
+.page-template-page-geotarget-php .modules a.button,
+.page-template-page-passion-profit-php .modules a.button {
+  margin-top: 10px;
+  font-size: 14px;
+  /*
+			font-weight: bold;
+			*/
+
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.page-template-page-coaching-online-php .artCoaching,
+.page-template-page-tuition-php .artCoaching,
+.page-template-page-coaching-php .artCoaching,
+.page-template-page-geotarget-php .artCoaching,
+.page-template-page-passion-profit-php .artCoaching {
+  font-family: Georgia;
+  font-weight: bold;
+}
+.page-template-page-coaching-online-php .tabsCallout,
+.page-template-page-tuition-php .tabsCallout,
+.page-template-page-coaching-php .tabsCallout,
+.page-template-page-geotarget-php .tabsCallout,
+.page-template-page-passion-profit-php .tabsCallout {
+  position: relative;
+  box-sizing: border-box;
+  background: white;
+  border-left: 1px solid #E2E2E2;
+  border-right: 1px solid #E2E2E2;
+  padding: 0px 50px 50px 50px;
+  margin-top: -40px;
+}
+.page-template-page-coaching-online-php .tabsCallout .tabsCallout-button,
+.page-template-page-tuition-php .tabsCallout .tabsCallout-button,
+.page-template-page-coaching-php .tabsCallout .tabsCallout-button,
+.page-template-page-geotarget-php .tabsCallout .tabsCallout-button,
+.page-template-page-passion-profit-php .tabsCallout .tabsCallout-button {
+  text-align: center;
+}
+.page-template-page-coaching-online-php .footer-image,
+.page-template-page-tuition-php .footer-image,
+.page-template-page-coaching-php .footer-image,
+.page-template-page-geotarget-php .footer-image,
+.page-template-page-passion-profit-php .footer-image {
+  background: url(../../images/bg-upcoming.jpg) no-repeat top center;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+.page-template-page-coaching-online-php .footer-image .featured-text,
+.page-template-page-tuition-php .footer-image .featured-text,
+.page-template-page-coaching-php .footer-image .featured-text,
+.page-template-page-geotarget-php .footer-image .featured-text,
+.page-template-page-passion-profit-php .footer-image .featured-text {
+  background: rgba(255, 255, 255, 0.95);
+  width: 265px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  left: 150px;
+  padding: 50px 25px;
+  height: 525px;
+}
+.page-template-page-coaching-online-php .footer-image .featured-text li,
+.page-template-page-tuition-php .footer-image .featured-text li,
+.page-template-page-coaching-php .footer-image .featured-text li,
+.page-template-page-geotarget-php .footer-image .featured-text li,
+.page-template-page-passion-profit-php .footer-image .featured-text li {
+  margin: 0;
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: .875em;
+}
+.page-template-page-coaching-online-php .footer-image .featured-text h4,
+.page-template-page-tuition-php .footer-image .featured-text h4,
+.page-template-page-coaching-php .footer-image .featured-text h4,
+.page-template-page-geotarget-php .footer-image .featured-text h4,
+.page-template-page-passion-profit-php .footer-image .featured-text h4 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 700;
+  color: black;
+  font-size: 1.429em;
+  margin-bottom: 25px;
+}
+.page-template-page-coaching-online-php .footer-image .featured-text a.green.button,
+.page-template-page-tuition-php .footer-image .featured-text a.green.button,
+.page-template-page-coaching-php .footer-image .featured-text a.green.button,
+.page-template-page-geotarget-php .footer-image .featured-text a.green.button,
+.page-template-page-passion-profit-php .footer-image .featured-text a.green.button {
+  margin-top: 15px;
+}
+.page-template-page-continuing-education-php .post_content {
+  border: solid 1px #e2e2e2;
+  background: white;
+}
+.page-template-page-continuing-education-php .post_content img {
+  margin-bottom: 50px;
+}
+.page-template-page-continuing-education-php .post_content .featured-text {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px 75px 50px;
+}
+.page-template-page-continuing-education-php .post_content .program {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px 75px 50px;
+}
+.page-template-page-continuing-education-php .post_content .program a.button {
+  margin-top: 10px;
+}
+.page-template-page-business-php .callouts .callout .callout-image {
+  width: 100%;
+}
+.page-template-page-business-php .callouts .callout .callout-image img {
+  vertical-align: bottom;
+  width: 100%;
+}
+.page-template-page-coaching-online-php .top-row,
+.page-template-page-tuition-php .top-row,
+.page-template-page-coaching-php .top-row,
+.page-template-page-business-php .top-row,
+.page-template-page-geotarget-php .top-row,
+.page-template-page-passion-profit-php .top-row {
+  margin-bottom: 50px;
+  zoom: 1;
+}
+.page-template-page-coaching-online-php .top-row:before,
+.page-template-page-tuition-php .top-row:before,
+.page-template-page-coaching-php .top-row:before,
+.page-template-page-business-php .top-row:before,
+.page-template-page-geotarget-php .top-row:before,
+.page-template-page-passion-profit-php .top-row:before {
+  content: '';
+  display: block;
+}
+.page-template-page-coaching-online-php .top-row:after,
+.page-template-page-tuition-php .top-row:after,
+.page-template-page-coaching-php .top-row:after,
+.page-template-page-business-php .top-row:after,
+.page-template-page-geotarget-php .top-row:after,
+.page-template-page-passion-profit-php .top-row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.page-template-page-coaching-online-php .top-row .events,
+.page-template-page-tuition-php .top-row .events,
+.page-template-page-coaching-php .top-row .events,
+.page-template-page-business-php .top-row .events,
+.page-template-page-geotarget-php .top-row .events,
+.page-template-page-passion-profit-php .top-row .events {
+  /*margin-left: 30px;
+			width: 30.233%;*/
+
+  padding-left: 40px;
+}
+.page-template-page-coaching-online-php .top-row .events h4,
+.page-template-page-tuition-php .top-row .events h4,
+.page-template-page-coaching-php .top-row .events h4,
+.page-template-page-business-php .top-row .events h4,
+.page-template-page-geotarget-php .top-row .events h4,
+.page-template-page-passion-profit-php .top-row .events h4 {
+  font-size: 1.429em;
+  margin-bottom: 20px;
+}
+.page-template-page-coaching-online-php .top-row .events ul,
+.page-template-page-tuition-php .top-row .events ul,
+.page-template-page-coaching-php .top-row .events ul,
+.page-template-page-business-php .top-row .events ul,
+.page-template-page-geotarget-php .top-row .events ul,
+.page-template-page-passion-profit-php .top-row .events ul {
+  margin-left: 0;
+}
+.page-template-page-coaching-online-php .top-row .events li,
+.page-template-page-tuition-php .top-row .events li,
+.page-template-page-coaching-php .top-row .events li,
+.page-template-page-business-php .top-row .events li,
+.page-template-page-geotarget-php .top-row .events li,
+.page-template-page-passion-profit-php .top-row .events li {
+  margin: 0;
+  list-style: none;
+  margin-bottom: 20px;
+}
+.page-template-page-coaching-online-php .top-row .events a.button.green,
+.page-template-page-tuition-php .top-row .events a.button.green,
+.page-template-page-coaching-php .top-row .events a.button.green,
+.page-template-page-business-php .top-row .events a.button.green,
+.page-template-page-geotarget-php .top-row .events a.button.green,
+.page-template-page-passion-profit-php .top-row .events a.button.green {
+  margin-top: 10px;
+}
+.page-template-page-coaching-online-php .callouts,
+.page-template-page-tuition-php .callouts,
+.page-template-page-coaching-php .callouts,
+.page-template-page-business-php .callouts,
+.page-template-page-geotarget-php .callouts,
+.page-template-page-passion-profit-php .callouts {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+  zoom: 1;
+}
+.page-template-page-coaching-online-php .callouts:before,
+.page-template-page-tuition-php .callouts:before,
+.page-template-page-coaching-php .callouts:before,
+.page-template-page-business-php .callouts:before,
+.page-template-page-geotarget-php .callouts:before,
+.page-template-page-passion-profit-php .callouts:before {
+  content: '';
+  display: block;
+}
+.page-template-page-coaching-online-php .callouts:after,
+.page-template-page-tuition-php .callouts:after,
+.page-template-page-coaching-php .callouts:after,
+.page-template-page-business-php .callouts:after,
+.page-template-page-geotarget-php .callouts:after,
+.page-template-page-passion-profit-php .callouts:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.page-template-page-coaching-online-php .callouts .callout,
+.page-template-page-tuition-php .callouts .callout,
+.page-template-page-coaching-php .callouts .callout,
+.page-template-page-business-php .callouts .callout,
+.page-template-page-geotarget-php .callouts .callout,
+.page-template-page-passion-profit-php .callouts .callout {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e2e2e2;
+  position: relative;
+  zoom: 1;
+}
+.page-template-page-coaching-online-php .callouts .callout:before,
+.page-template-page-tuition-php .callouts .callout:before,
+.page-template-page-coaching-php .callouts .callout:before,
+.page-template-page-business-php .callouts .callout:before,
+.page-template-page-geotarget-php .callouts .callout:before,
+.page-template-page-passion-profit-php .callouts .callout:before {
+  content: '';
+  display: block;
+}
+.page-template-page-coaching-online-php .callouts .callout:after,
+.page-template-page-tuition-php .callouts .callout:after,
+.page-template-page-coaching-php .callouts .callout:after,
+.page-template-page-business-php .callouts .callout:after,
+.page-template-page-geotarget-php .callouts .callout:after,
+.page-template-page-passion-profit-php .callouts .callout:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.page-template-page-coaching-online-php .callouts .callout .callout-image,
+.page-template-page-tuition-php .callouts .callout .callout-image,
+.page-template-page-coaching-php .callouts .callout .callout-image,
+.page-template-page-business-php .callouts .callout .callout-image,
+.page-template-page-geotarget-php .callouts .callout .callout-image,
+.page-template-page-passion-profit-php .callouts .callout .callout-image {
+  float: left;
+  max-width: 100%;
+}
+.page-template-page-coaching-online-php .callouts .callout .callout-image img,
+.page-template-page-tuition-php .callouts .callout .callout-image img,
+.page-template-page-coaching-php .callouts .callout .callout-image img,
+.page-template-page-business-php .callouts .callout .callout-image img,
+.page-template-page-geotarget-php .callouts .callout .callout-image img,
+.page-template-page-passion-profit-php .callouts .callout .callout-image img {
+  vertical-align: bottom;
+}
+.page-template-page-coaching-online-php .callouts .callout .callout-content,
+.page-template-page-tuition-php .callouts .callout .callout-content,
+.page-template-page-coaching-php .callouts .callout .callout-content,
+.page-template-page-business-php .callouts .callout .callout-content,
+.page-template-page-geotarget-php .callouts .callout .callout-content,
+.page-template-page-passion-profit-php .callouts .callout .callout-content {
+  position: absolute;
+  width: 450px;
+  right: 35px;
+  top: 75px;
+}
+.page-template-page-coaching-online-php .callouts .callout .callout-content h2,
+.page-template-page-tuition-php .callouts .callout .callout-content h2,
+.page-template-page-coaching-php .callouts .callout .callout-content h2,
+.page-template-page-business-php .callouts .callout .callout-content h2,
+.page-template-page-geotarget-php .callouts .callout .callout-content h2,
+.page-template-page-passion-profit-php .callouts .callout .callout-content h2 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2em;
+  color: black;
+  padding-bottom: 25px;
+  margin-bottom: 0;
+}
+.page-template-page-coaching-online-php .callouts .callout .callout-content p,
+.page-template-page-tuition-php .callouts .callout .callout-content p,
+.page-template-page-coaching-php .callouts .callout .callout-content p,
+.page-template-page-business-php .callouts .callout .callout-content p,
+.page-template-page-geotarget-php .callouts .callout .callout-content p,
+.page-template-page-passion-profit-php .callouts .callout .callout-content p {
+  padding-left: 25px;
+}
+.page-template-page-coaching-online-php .callouts .callout:nth-of-type(even) .callout-content,
+.page-template-page-tuition-php .callouts .callout:nth-of-type(even) .callout-content,
+.page-template-page-coaching-php .callouts .callout:nth-of-type(even) .callout-content,
+.page-template-page-business-php .callouts .callout:nth-of-type(even) .callout-content,
+.page-template-page-geotarget-php .callouts .callout:nth-of-type(even) .callout-content,
+.page-template-page-passion-profit-php .callouts .callout:nth-of-type(even) .callout-content {
+  right: auto;
+  left: 55px;
+}
+.page-template-page-coaching-online-php .sub-callout,
+.page-template-page-tuition-php .sub-callout,
+.page-template-page-coaching-php .sub-callout,
+.page-template-page-business-php .sub-callout,
+.page-template-page-geotarget-php .sub-callout,
+.page-template-page-passion-profit-php .sub-callout {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  padding: 50px;
+}
+.page-template-page-coaching-online-php .sub-callout h2,
+.page-template-page-tuition-php .sub-callout h2,
+.page-template-page-coaching-php .sub-callout h2,
+.page-template-page-business-php .sub-callout h2,
+.page-template-page-geotarget-php .sub-callout h2,
+.page-template-page-passion-profit-php .sub-callout h2 {
+  font-size: 2em;
+  color: black;
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.page-template-page-coaching-online-php .sub-callout p,
+.page-template-page-tuition-php .sub-callout p,
+.page-template-page-coaching-php .sub-callout p,
+.page-template-page-business-php .sub-callout p,
+.page-template-page-geotarget-php .sub-callout p,
+.page-template-page-passion-profit-php .sub-callout p {
+  padding: 0 75px;
+  text-align: center;
+}
+.page-template-page-coaching-online-php .sub-callout p em,
+.page-template-page-tuition-php .sub-callout p em,
+.page-template-page-coaching-php .sub-callout p em,
+.page-template-page-business-php .sub-callout p em,
+.page-template-page-geotarget-php .sub-callout p em,
+.page-template-page-passion-profit-php .sub-callout p em {
+  font-size: 1.286em;
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  color: #f05a40;
+}
+.page-template-page-coaching-online-php .timeline,
+.page-template-page-tuition-php .timeline,
+.page-template-page-coaching-php .timeline,
+.page-template-page-business-php .timeline,
+.page-template-page-geotarget-php .timeline,
+.page-template-page-passion-profit-php .timeline {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 50px;
+  padding-bottom: 100px;
+}
+.page-template-page-coaching-online-php .timeline h4,
+.page-template-page-tuition-php .timeline h4,
+.page-template-page-coaching-php .timeline h4,
+.page-template-page-business-php .timeline h4,
+.page-template-page-geotarget-php .timeline h4,
+.page-template-page-passion-profit-php .timeline h4 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2em;
+  color: #f05a40;
+  margin-bottom: 50px;
+}
+.page-template-page-coaching-online-php .timeline h3,
+.page-template-page-tuition-php .timeline h3,
+.page-template-page-coaching-php .timeline h3,
+.page-template-page-business-php .timeline h3,
+.page-template-page-geotarget-php .timeline h3,
+.page-template-page-passion-profit-php .timeline h3 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 700;
+  color: black;
+  font-size: 1.143em;
+  margin-bottom: 25px;
+}
+.page-template-page-coaching-online-php .timeline article,
+.page-template-page-tuition-php .timeline article,
+.page-template-page-coaching-php .timeline article,
+.page-template-page-business-php .timeline article,
+.page-template-page-geotarget-php .timeline article,
+.page-template-page-passion-profit-php .timeline article {
+  zoom: 1;
+  margin-bottom: 50px;
+  position: relative;
+}
+.page-template-page-coaching-online-php .timeline article:before,
+.page-template-page-tuition-php .timeline article:before,
+.page-template-page-coaching-php .timeline article:before,
+.page-template-page-business-php .timeline article:before,
+.page-template-page-geotarget-php .timeline article:before,
+.page-template-page-passion-profit-php .timeline article:before {
+  content: '';
+  display: block;
+}
+.page-template-page-coaching-online-php .timeline article:after,
+.page-template-page-tuition-php .timeline article:after,
+.page-template-page-coaching-php .timeline article:after,
+.page-template-page-business-php .timeline article:after,
+.page-template-page-geotarget-php .timeline article:after,
+.page-template-page-passion-profit-php .timeline article:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.page-template-page-coaching-online-php .timeline article .week,
+.page-template-page-tuition-php .timeline article .week,
+.page-template-page-coaching-php .timeline article .week,
+.page-template-page-business-php .timeline article .week,
+.page-template-page-geotarget-php .timeline article .week,
+.page-template-page-passion-profit-php .timeline article .week,
+.page-template-page-coaching-online-php .timeline article .month,
+.page-template-page-tuition-php .timeline article .month,
+.page-template-page-coaching-php .timeline article .month,
+.page-template-page-business-php .timeline article .month,
+.page-template-page-geotarget-php .timeline article .month,
+.page-template-page-passion-profit-php .timeline article .month {
+  width: 50%;
+  float: right;
+}
+.page-template-page-coaching-online-php .timeline article .month,
+.page-template-page-tuition-php .timeline article .month,
+.page-template-page-coaching-php .timeline article .month,
+.page-template-page-business-php .timeline article .month,
+.page-template-page-geotarget-php .timeline article .month,
+.page-template-page-passion-profit-php .timeline article .month {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  text-align: center;
+  font-family: "", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.286em;
+}
+.page-template-page-coaching-online-php .timeline article .month h3,
+.page-template-page-tuition-php .timeline article .month h3,
+.page-template-page-coaching-php .timeline article .month h3,
+.page-template-page-business-php .timeline article .month h3,
+.page-template-page-geotarget-php .timeline article .month h3,
+.page-template-page-passion-profit-php .timeline article .month h3 {
+  font-family: "daniel", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.6em;
+  font-weight: bold;
+}
+.page-template-page-coaching-online-php .timeline article p strong,
+.page-template-page-tuition-php .timeline article p strong,
+.page-template-page-coaching-php .timeline article p strong,
+.page-template-page-business-php .timeline article p strong,
+.page-template-page-geotarget-php .timeline article p strong,
+.page-template-page-passion-profit-php .timeline article p strong {
+  color: #f05a40;
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.page-template-page-coaching-online-php .timeline article:nth-of-type(even) .week,
+.page-template-page-tuition-php .timeline article:nth-of-type(even) .week,
+.page-template-page-coaching-php .timeline article:nth-of-type(even) .week,
+.page-template-page-business-php .timeline article:nth-of-type(even) .week,
+.page-template-page-geotarget-php .timeline article:nth-of-type(even) .week,
+.page-template-page-passion-profit-php .timeline article:nth-of-type(even) .week {
+  float: left;
+}
+.page-template-page-coaching-online-php .timeline article:nth-of-type(even) .month,
+.page-template-page-tuition-php .timeline article:nth-of-type(even) .month,
+.page-template-page-coaching-php .timeline article:nth-of-type(even) .month,
+.page-template-page-business-php .timeline article:nth-of-type(even) .month,
+.page-template-page-geotarget-php .timeline article:nth-of-type(even) .month,
+.page-template-page-passion-profit-php .timeline article:nth-of-type(even) .month {
+  right: 0;
+}
+.page-template-page-coaching-online-php .timeline a.button,
+.page-template-page-tuition-php .timeline a.button,
+.page-template-page-coaching-/ .timeline a.button,
+.page-template-page-business-php .timeline a.button,
+.page-template-page-geotarget-php .timeline a.button,
+.page-template-page-passion-profit-php .timeline a.button {
+  margin-top: 10px;
+}
+.page-template-page-coaching-online-php .footer-image,
+.page-template-page-tuition-php .footer-image,
+.page-template-page-coaching-php .footer-image,
+.page-template-page-business-php .footer-image,
+.page-template-page-geotarget-php .footer-image,
+.page-template-page-passion-profit-php .footer-image {
+  background: url(../../images/bg-upcoming.jpg) no-repeat top center;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+.page-template-page-coaching-online-php .footer-image .featured-text,
+.page-template-page-tuition-php .footer-image .featured-text,
+.page-template-page-coaching-php .footer-image .featured-text,
+.page-template-page-business-php .footer-image .featured-text,
+.page-template-page-geotarget-php .footer-image .featured-text,
+.page-template-page-passion-profit-php .footer-image .featured-text {
+  background: rgba(255, 255, 255, 0.95);
+  width: 265px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  left: 150px;
+  padding: 50px 25px;
+  height: 525px;
+}
+.page-template-page-coaching-online-php .footer-image .featured-text li,
+.page-template-page-tuition-php .footer-image .featured-text li,
+.page-template-page-coaching-php .footer-image .featured-text li,
+.page-template-page-business-php .footer-image .featured-text li,
+.page-template-page-geotarget-php .footer-image .featured-text li,
+.page-template-page-passion-profit-php .footer-image .featured-text li {
+  margin: 0;
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: .875em;
+}
+.page-template-page-coaching-online-php .footer-image .featured-text h4,
+.page-template-page-tuition-php .footer-image .featured-text h4,
+.page-template-page-coaching-php .footer-image .featured-text h4,
+.page-template-page-business-php .footer-image .featured-text h4,
+.page-template-page-geotarget-php .footer-image .featured-text h4,
+.page-template-page-passion-profit-php .footer-image .featured-text h4 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 700;
+  color: black;
+  font-size: 1.429em;
+  margin-bottom: 25px;
+}
+.page-template-page-coaching-online-php .footer-image .featured-text a.green.button,
+.page-template-page-tuition-php .footer-image .featured-text a.green.button,
+.page-template-page-coaching-php .footer-image .featured-text a.green.button,
+.page-template-page-business-php .footer-image .featured-text a.green.button,
+.page-template-page-geotarget-php .footer-image .featured-text a.green.button,
+.page-template-page-passion-profit-php .footer-image .featured-text a.green.button {
+  margin-top: 15px;
+}
+.page-template-page-coaching-online-php .sub-callout,
+.page-template-page-geotarget-php .sub-callout,
+.page-template-page-passion-profit-php .sub-callout {
+  background: transparent;
+  border: none;
+  padding: 50px 0;
+}
+.page-template-page-coaching-online-php dl.tabs,
+.page-template-page-geotarget-php dl.tabs,
+.page-template-page-passion-profit-php dl.tabs {
+  float: none;
+  margin: 20px 45px;
+}
+.page-template-page-coaching-online-php #overviewTab,
+.page-template-page-geotarget-php #overviewTab,
+.page-template-page-passion-profit-php #overviewTab {
+  padding-top: 0;
+}
+.page-template-page-coaching-online-php .full-width-callout,
+.page-template-page-geotarget-php .full-width-callout,
+.page-template-page-passion-profit-php .full-width-callout {
+  margin: 0 -51px 20px;
+}
+.page-template-page-coaching-online-php .full-width-callout .callout-content,
+.page-template-page-geotarget-php .full-width-callout .callout-content,
+.page-template-page-passion-profit-php .full-width-callout .callout-content {
+  right: 0 !important;
+}
+.page-template-page-geotarget-php dl.tabs {
+  margin: 20px 40px;
+}
+.page-template-page-coaching-online-php .top-row {
+  margin-bottom: 0;
+}
+.page-template-page-coaching-online-php .sub-callout {
+  padding-top: 15px;
+}
+.page-template-page-coaching-online-php .tabsCallout-button {
+  margin: 10px 0;
+}
+.page-template-page-coaching-online-php dl.tabs {
+  float: none;
+  margin: 20px auto;
+  display: table;
+}
+.page-template-page-geotarget-php .top-row {
+  margin-bottom: 0;
+}
+.page-template-page-business-php .tabsCallout {
+  margin-top: -40px;
+  padding: 0 50px 50px;
+  position: relative;
+}
+.page-template-page-business-php .tabsCallout .tabsCallout-button {
+  text-align: center;
+}
+.page-template-page-business-php #week-by-weekTab .timeline {
+  border: none;
+  padding: 0;
+}
+.page-template-page-passion-profit-php .top-row {
+  margin-bottom: 0;
+}
+.page-template-page-passion-profit-php .sub-callout {
+  padding: 15px 0;
+}
+.page-template-page-passion-profit-php .tabsCallout {
+  margin-top: 0;
+}
+.page-template-page-passion-profit-php ul.tabs-content > li.active {
+  padding-top: 0;
+}
+.page-template-page-passion-profit-php .callouts .callout .callout-content {
+  top: 0;
+}
+.page-template-page-passion-profit-php h2.black {
+  color: #000;
+  font-weight: bold;
+}
+dl.tabs {
+  float: left;
+  display: block;
+  margin: 20px 60px;
+  height: 30px;
+  border: solid 1px #ccc;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  border-top-color: #fff;
+  /* fallback/image non-cover color */
+
+  background-color: #ededed;
+  /* Safari 4+, Chrome 1-9 */
+
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#ebebeb));
+  /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+
+  background-image: -webkit-linear-gradient(top, #ffffff, #ebebeb);
+  /* Firefox 3.6+ */
+
+  background-image: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  /* IE 10+ */
+
+  background-image: -ms-linear-gradient(top, #ffffff, #ebebeb);
+  /* Opera 11.10+ */
+
+  background-image: -o-linear-gradient(top, #ffffff, #ebebeb);
+}
+ul.tabs-content > li.active {
+  display: block;
+  padding: 20px 0px;
+}
+ul.tabs-content > li {
+  display: none;
+}
+dl.tabs dd.active a {
+  cursor: default;
+  color: #f0460d;
+}
+dl.tabs dd {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0px 15px;
+  font-style: italic;
+  border-left: solid 1px #E6E6E6;
+  border-right: solid 1px white;
+  height: 26px;
+}
+dl.tabs dd a {
+  color: #515151;
+  display: block;
+  font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  padding: 0 13px;
+}
+dl.tabs dd.active {
+  border: none;
+  margin: 0;
+}
+dl.tabs dd.active a {
+  background: none;
+  border: none;
+}
+.tabFirst {
+  border-left: solid 0px white!important;
+}
+.tabLast {
+  border-right: solid 0px white!important;
+}
+.tabs-content {
+  clear: both;
+}
+.mentorImg {
+  border: solid 1px #e5e5e5;
+  line-height: 0.8;
+  margin: 10px 0px;
+}
+.tabsCallout h2 {
+  margin-bottom: 30px;
+}
+.post-jm {
+  text-align: center;
+}
+.tabsCallout a.button.green {
+  top: 0px;
+}
+.callout-contentTab {
+  position: absolute;
+  width: 450px;
+  top: 75px;
+  right: 35px;
+}
+.Tabs {
+  border: 0px solid #fff!important;
+  margin: 0px 0px 25px 0px!important;
+  background: transparent;
+}
+.conTab {
+  margin-top: -100px;
+  margin-left: -70px;
+  background: transparent;
+}
+.tabBoy {
+  border: 0px #fff solid!important;
+}
+.twitter-feed-management h2 {
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.twitter-feed-management h1 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.twitter-feed-management .tweet2 ul {
+  list-style: none;
+  margin-left: 0px;
+  margin-top: 5px;
+}
+.twitter-feed-management .tweet2 ul li {
+  border-bottom: 1px solid #888888;
+  padding: 5px 0;
+}
+.blog #blog-header,
+.single #blog-header {
+  padding-bottom: 50px;
+}
+.blog #blog-header h1,
+.single #blog-header h1 {
+  font-family: "daniel", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  padding-bottom: 0;
+}
+.blog #blog-header h2,
+.single #blog-header h2 {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+}
+.blog article,
+.single article {
+  padding-bottom: 28px;
+}
+.blog article header h2,
+.single article header h2 {
+  font-size: 16px;
+}
+.blog article header .dsq-postid,
+.single article header .dsq-postid {
+  background: url('../../images/icon-comment-bubble.png') no-repeat left center;
+  margin-left: 5px;
+  padding-left: 20px;
+}
+.blog article section,
+.single article section {
+  border-color: #eee;
+  margin: 0 0 20px;
+}
+.blog article section hr,
+.single article section hr {
+  margin: 10px 0 16px;
+}
+.blog article section p,
+.single article section p {
+  padding-bottom: 0;
+}
+.blog .wp-prev-next,
+.single .wp-prev-next {
+  text-align: center;
+}
+.blog .wp-prev-next ul li,
+.single .wp-prev-next ul li {
+  display: inline-block;
+  *display: inline;
+  padding: 0 9px;
+}
+.blog .wp-prev-next ul li a,
+.single .wp-prev-next ul li a {
+  color: #000;
+  font-style: italic;
+}
+.blog .wp-prev-next .next-link-button a,
+.single .wp-prev-next .next-link-button a,
+.blog .wp-prev-next .prev-link-button a,
+.single .wp-prev-next .prev-link-button a {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  /* Font Settings */
+
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: .875em;
+  color: white;
+  text-decoration: none;
+  /* Background color and Gradient and Border */
+
+  background: url(../../images/bg-button-orange.png) repeat;
+  border: none;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: center;
+  min-width: 150px;
+  /* Corners, Borders, and Padding */
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 5px  25px;
+  line-height: 24px;
+  background-size: 180px auto;
+  font-size: 1.2em;
+  font-style: normal;
+  height: 42px;
+  min-width: 42px;
+  padding: 7px;
+}
+.blog .wp-prev-next .next-link-button a:hover,
+.single .wp-prev-next .next-link-button a:hover,
+.blog .wp-prev-next .prev-link-button a:hover,
+.single .wp-prev-next .prev-link-button a:hover {
+  color: white;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+.blog .wp-prev-next .next-link-button a:active,
+.single .wp-prev-next .next-link-button a:active,
+.blog .wp-prev-next .prev-link-button a:active,
+.single .wp-prev-next .prev-link-button a:active {
+  top: 2px;
+}
+.blog .wp-prev-next .next-link-button a:hover,
+.single .wp-prev-next .next-link-button a:hover,
+.blog .wp-prev-next .prev-link-button a:hover,
+.single .wp-prev-next .prev-link-button a:hover {
+  background-size: 180px auto;
+}
+#mentorContent:nth-of-type(4n+1) {
+  clear: both;
+}
+#mentorContent .type-mentors {
+  float: left;
+}
+.page-template-page-business-center-php .welcome p {
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.375em;
+  color: black;
+}
+.page-template-page-business-center-php .callouts {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.page-template-page-business-center-php .callouts .four.columns {
+  margin-bottom: 15px;
+  min-height: 385px;
+}
+.page-template-page-business-center-php .callouts .four.columns a {
+  max-width: 100%;
+  display: block;
+}
+.page-template-page-business-center-php .callouts .four.columns a img {
+  max-width: 100%;
+}
+.page-template-page-business-center-php .callouts .four.columns img {
+  padding-bottom: 15px;
+}
+.page-template-page-business-center-php .callouts .four.columns h3,
+.page-template-page-business-center-php .callouts .four.columns p {
+  padding: 0 15px;
+  padding-bottom: 15px;
+}
+.page-template-page-business-center-php .callouts .four.columns a {
+  margin-left: 15px;
+}
+.page-template-page-business-center-php .callouts .four.columns:nth-of-type(3n+1) {
+  clear: both;
+}
+.page-template-page-business-center-php .callouts .four.columns:last-child {
+  float: left;
+}
+.page-template-page-business-center-php .featured {
+  background: url(../../images/bg-divider.jpg) no-repeat center bottom;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+.page-template-page-business-center-php .recent-blog {
+  background: #ffffff url(../../images/bg-blog.jpg) no-repeat top left;
+  border: solid 1px #c4c4c4;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 450px;
+  padding: 55px;
+  margin-top: 50px;
+}
+.page-template-page-business-center-php .recent-blog h2 {
+  margin-bottom: 10px;
+}
+.page-template-page-business-center-php .recent-blog h4 {
+  padding-bottom: 15px;
+}
+.page-template-page-business-center-php .recent-blog .row {
+  padding-left: 25px;
+}
+.page-template-page-business-center-php .recent-blog .row a.button {
+  margin-right: 10px;
+}
+.page-template-page-business-center-php .recent-blog .five.columns {
+  left: 25px;
+  top: 20px;
+}
+.page-template-page-business-center-php .recent-blog .flexslider:hover .flex-prev {
+  left: -36px;
+}
+.page-template-page-business-center-php .recent-blog .flexslider:hover .flex-next {
+  right: -85px;
+}
+.page-template-page-business-center-php .recent-blog .flexslider .flex-control-nav {
+  display: none;
+}
+.page-template-page-business-center-php .recent-blog .flexslider .flex-direction-nav {
+  position: absolute;
+  right: 106px;
+  top: 25px;
+}
+.page-template-page-business-center-php .recent-blog .flexslider .flex-direction-nav a {
+  background: url("../../images/bg_direction_nav.png") no-repeat scroll 0 0 transparent;
+  opacity: 0.8;
+  width: 85px;
+}
+.page-template-page-business-center-php .recent-blog .flexslider .flex-direction-nav a.flex-prev {
+  left: -85px;
+}
+.page-template-page-business-center-php .recent-blog .flexslider .flex-direction-nav a.flex-next {
+  background-position: 100% 0;
+  right: -85px;
+}
+.single #main[role="main"] {
+  margin-top: 0;
+}
+.page-template-page-organization-php .type-page .post_content .the-content {
+  padding-top: 50px;
+}
+#sidebar2[role=complementary] {
+  /* Social Media */
+
+  /* Search */
+
+  /* Archives Widget */
+
+  /* Upcoming Programs/Erickson TV */
+
+  /* Flickr Gallery */
+
+  /* Twitter Feed */
+
+  /* Amazon Bestseller */
+
+  /* Newsletter SignUp */
+
+}
+#sidebar2[role=complementary] h4 {
+  font-size: 14px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+#sidebar2[role=complementary] .social-media {
+  margin-left: 0;
+  padding-bottom: 60px;
+  text-align: right;
+}
+#sidebar2[role=complementary] .social-media li {
+  padding-left: 10px;
+}
+#sidebar2[role=complementary] .widget_search {
+  padding-bottom: 35px;
+}
+#sidebar2[role=complementary] .widget_search form input[type="text"] {
+  background: none;
+  border: 1px solid #DCDCDC;
+  border-radius: 0;
+  box-shadow: none;
+  color: #000;
+  padding: 5px 10px !important;
+}
+#sidebar2[role=complementary] .widget_search .four {
+  text-align: right;
+}
+#sidebar2[role=complementary] .widget_search #search-button {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  /* Font Settings */
+
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: .875em;
+  color: white;
+  text-decoration: none;
+  /* Background color and Gradient and Border */
+
+  background: url(../../images/bg-button-orange.png) repeat;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: center;
+  min-width: 150px;
+  /* Corners, Borders, and Padding */
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 5px  25px;
+  line-height: 24px;
+  background: url("../../images/search.png") no-repeat 15px center, url("../../images/bg-button-orange.png");
+  border: none;
+  box-shadow: none;
+  padding: 5px 20px 5px 35px;
+  min-width: 90px;
+}
+#sidebar2[role=complementary] .widget_search #search-button:hover {
+  color: white;
+  background: url(../../images/bg-button-green.png) repeat;
+}
+#sidebar2[role=complementary] .widget_search #search-button:active {
+  top: 2px;
+}
+#sidebar2[role=complementary] .widget_search #search-button:hover {
+  background: url("../../images/search.png") no-repeat 15px center, url("../../images/bg-button-green.png");
+}
+#sidebar2[role=complementary] .widget_archive ul {
+  list-style: none;
+  margin-left: 25px;
+}
+#sidebar2[role=complementary] .widget_archive ul li {
+  color: #888888;
+}
+#sidebar2[role=complementary] .widget_archive ul li:after {
+  content: "Posts";
+  padding-left: 5px;
+}
+#sidebar2[role=complementary] .widget_archive ul li:before {
+  content: "--";
+  padding-right: 8px;
+}
+#sidebar2[role=complementary] .widget_archive ul li a {
+  color: #888888;
+  display: inline-block;
+  width: 145px;
+}
+#sidebar2[role=complementary] .widget_archive ul li:hover {
+  color: #f05a40;
+}
+#sidebar2[role=complementary] .widget_archive ul li:hover a {
+  color: #f05a40;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-4 {
+  margin-top: 25px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-4 h4 {
+  width: 205px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-5 h4 {
+  width: 135px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 h4 {
+  width: 90px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 #flickr-gallery {
+  padding-left: 25px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 #flickr-gallery a {
+  float: left;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-4,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-5,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 {
+  margin-bottom: 20px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-4 h4,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-5 h4,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 h4 {
+  background: #fff;
+  -webkit-border-radius: 10px 30px 0 0;
+  border-radius: 10px 30px 0 0;
+  color: #f05a40;
+  padding: 10px 10px 5px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-4 iframe,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-5 iframe,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 iframe {
+  height: auto;
+  max-width: 100%;
+  min-height: 200px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-4 .blog-widget-repeater,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-5 .blog-widget-repeater,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 .blog-widget-repeater {
+  background: #fff;
+  border-radius: 0 3px 3px 3px;
+  margin-left: 0;
+  padding: 15px 0 4px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-4 .blog-widget-repeater .four.columns,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-5 .blog-widget-repeater .four.columns,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 .blog-widget-repeater .four.columns {
+  padding-right: 0;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-4 .blog-widget-repeater .eight.columns,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-5 .blog-widget-repeater .eight.columns,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 .blog-widget-repeater .eight.columns {
+  margin-top: -5px;
+  padding-left: 15px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-4 .blog-widget-repeater .eight.columns p,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-5 .blog-widget-repeater .eight.columns p,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 .blog-widget-repeater .eight.columns p {
+  font-size: 12px;
+  line-height: 18px;
+}
+#sidebar2[role=complementary] #phpwidgettemplates_widget-4 .blog-widget-repeater .eight.columns p .date,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-5 .blog-widget-repeater .eight.columns p .date,
+#sidebar2[role=complementary] #phpwidgettemplates_widget-6 .blog-widget-repeater .eight.columns p .date {
+  color: #f05a40;
+  font-style: italic;
+}
+#sidebar2[role=complementary] .flickr-gallery {
+  background: #fff;
+}
+#sidebar2[role=complementary] .flickr-gallery .row {
+  background: #fff;
+}
+#sidebar2[role=complementary] .flickr-gallery .row-1 {
+  padding-top: 15px;
+}
+#sidebar2[role=complementary] .flickr-gallery .row-2 {
+  padding-bottom: 10px;
+}
+#sidebar2[role=complementary] .tweet .tweet_list {
+  margin-left: 0;
+}
+#sidebar2[role=complementary] .tweet .tweet_list li {
+  list-style: none;
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 25px;
+  background: url(../../images/bullet-twitter-gray.png) no-repeat left 5px;
+  padding-left: 45px;
+  text-transform: lowercase;
+}
+#sidebar2[role=complementary] .tweet .tweet_list li.tweet_first {
+  background: url(../../images/bullet-twitter-orange.png) no-repeat left 5px;
+}
+#sidebar2[role=complementary] .amazon-bestseller {
+  padding-bottom: 50px;
+}
+#sidebar2[role=complementary] .amazon-bestseller .amazon-info {
+  position: relative;
+}
+#sidebar2[role=complementary] .amazon-bestseller .amazon-info .amazon-price {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #f05a40;
+  font-size: 18px;
+  left: 35px;
+  line-height: 26px;
+  position: absolute;
+  top: -45px;
+}
+#sidebar2[role=complementary] div.gform_wrapper .top_label .gfield_label {
+  display: none;
+}
+#sidebar2[role=complementary] .gform_wrapper .top_label input.medium,
+#sidebar2[role=complementary] .gform_wrapper .top_label select.medium {
+  width: 90%;
+}
+#sidebar2[role=complementary] form input[type="email"] {
+  background: none;
+  border: 1px solid #DCDCDC;
+  border-radius: 0;
+  box-shadow: none;
+}
+#sidebar2[role=complementary] div.gform_wrapper .gform_footer input.button,
+#sidebar2[role=complementary] div.gform_wrapper .gform_footer input[type="submit"] {
+  background: url("../../images/bg-button-orange.png") repeat scroll 0 0 padding-box transparent;
+  margin-top: 5px;
+}
+#sidebar2[role=complementary] div.gform_wrapper .gform_footer input.button:hover,
+#sidebar2[role=complementary] div.gform_wrapper .gform_footer input[type="submit"]:hover {
+  background: url("../../images/bg-button-green.png") repeat scroll 0 0 padding-box transparent;
+}
+footer[role=contentinfo] {
+  margin-top: 50px;
+  padding-top: 35px;
+  background: url(../../images/bg-divider.jpg) repeat-x center top, url(../../images/bg-footer.jpg) repeat center top;
+  color: #cfcfcf;
+}
+footer[role=contentinfo] strong {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #f05a40;
+}
+footer[role=contentinfo] h5 {
+  margin-bottom: 25px;
+}
+footer[role=contentinfo] .tweet .tweet_list li {
+  list-style: none;
+  font-family: "museo-slab", serif;
+  font-style: italic;
+  font-weight: 300;
+  color: #cfcfcf;
+  margin-bottom: 25px;
+  background: url(../../images/bullet-twitter-gray.png) no-repeat left 5px;
+  padding-left: 45px;
+}
+footer[role=contentinfo] .tweet .tweet_list li.tweet_first {
+  background: url(../../images/bullet-twitter-orange.png) no-repeat left 5px;
+}
+footer[role=contentinfo] .four.columns p {
+  padding-bottom: 10px;
+}
+footer[role=contentinfo] .footer-nav {
+  text-align: left;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 1.546em;
+  text-transform: uppercase;
+}
+footer[role=contentinfo] .footer-nav li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+footer[role=contentinfo] .footer-nav li a {
+  color: white;
+  text-decoration: none;
+}
+footer[role=contentinfo] .footer-nav li a:hover {
+  color: ;
+}
+footer[role=contentinfo] .footer-nav li + li:before {
+  content: ' / ';
+  color: ;
+  padding: 0 5px;
+}
+footer[role=contentinfo] .social-media {
+  margin-left: 0;
+}
+footer[role=contentinfo] .social-media li {
+  padding: 0 5px;
+}
+footer[role=contentinfo] small {
+  margin-top: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1em;
+  width: 100%;
+  text-align: center;
+  display: block;
+  color: #cfcfcf;
+  padding: 10px 10px;
+  background: url(../../images/bg-small.jpg) repeat;
+}
+footer[role=contentinfo] small a {
+  color: #cfcfcf;
+  text-decoration: none;
+}
+footer[role=contentinfo] small a:hover {
+  color: white ;
+}
+footer[role=contentinfo] .footer-bottom-image {
+  margin: 20px 0 10px;
+}
+#responsive-footer {
+  margin-bottom: 50px;
+  display: none;
+}
+#responsive-footer .main-nav {
+  max-width: 100%;
+  margin: 0;
+}
+#responsive-footer ul#footer-response {
+  list-style: none;
+  margin-left: 0;
+}
+#responsive-footer ul#footer-response a {
+  color: #f05a40;
+}
+#responsive-footer ul#footer-response a:hover {
+  color: #90991b;
+}
+#responsive-footer ul#footer-response > li {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#responsive-footer ul#footer-response > li > a {
+  font-size: 1.7em;
+  color: white;
+  margin-bottom: 10px;
+  display: block;
+}
+#responsive-footer ul#footer-response > li > a:hover {
+  color: #f05a40;
+}
+#responsive-footer ul#footer-response > li .sub-menu {
+  list-style: none;
+  margin-left: 0;
+}
+#responsive-footer ul#footer-response > li .sub-menu a {
+  font-size: 1.2em;
+  margin: 5px 0;
+  display: block;
+}
+.pageCallouts {
+  background: white;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+  padding: 50px 50px 10px 50px;
+  margin-top: -10px;
+}
+.contentCell {
+  position: relative;
+  border-bottom: solid 1px #CCC;
+  background: white;
+  padding: 0px 500px 90px 50px;
+  border-left: solid 1px #e2e2e2;
+  border-right: solid 1px #e2e2e2;
+}
+.floatingImg {
+  position: absolute;
+  bottom: -8px;
+  right: -50px;
+}
+.fun {
+  position: relative;
+  padding: 50px 50px 50px 500px;
+}
+.floatingFunImg {
+  position: absolute;
+  bottom: -8px;
+  left: -50px;
+}
+.gotQuestions {
+  border-bottom: solid 1px #e2e2e2;
+  padding-bottom: 50px;
+}
+.page-template-page-coaching-online-php #certificationTab .read-more,
+.page-template-page-tuition-php #certificationTab .read-more,
+.page-template-page-coaching-php #certificationTab .read-more,
+.page-template-page-geotarget-php #certificationTab .read-more {
+  margin-bottom: 25px;
+}
+#certificationTab strong {
+  font-family: "museo-slab", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.175em;
+  color: #f05a40;
+  padding: 10px 0;
+  display: block;
+}
+#singleMentors {
+  padding: 50px;
+}
+#singleMentors img {
+  float: left;
+  border: solid 1px #ccc;
+  margin: 0px 20px 20px 0px;
+}
+#singleMentors #pic img {
+  max-width: 210px;
+}
+.single-mentors div.header.top {
+  display: none;
+}
+#pic {
+  float: left;
+}
+.single-mentors .post_content {
+  float: right;
+  width: 685px;
+}
+.body-single-mentor {
+  position: relative;
+  /*.close {
+		background: url(../../images/pop-up-close.png) no-repeat 0 0;
+		right: 0;
+		position: absolute;
+		top: 0;
+		width: 43px;
+			height: 43px;
+		a {
+
+		}
+	}*/
+
+}
+.body-single-mentor .row {
+  min-width: inherit;
+  width: auto;
+}
+.page-template-page-coaching-online-php #sb-info,
+.page-template-page-tuition-php #sb-info,
+.page-template-page-faculty-php #sb-info,
+.page-template-page-organization-php #sb-info,
+.page-template-page-coaching-php #sb-info,
+.page-template-page-geotarget-php #sb-info {
+  height: 46px;
+  position: absolute;
+  right: 25px;
+  top: 45px;
+}
+.page-template-page-coaching-online-php #sb-nav a,
+.page-template-page-tuition-php #sb-nav a,
+.page-template-page-faculty-php #sb-nav a,
+.page-template-page-organization-php #sb-nav a,
+.page-template-page-coaching-php #sb-nav a,
+.page-template-page-geotarget-php #sb-nav a {
+  height: 43px;
+  width: 43px;
+}
+.page-template-page-coaching-online-php #sb-nav-close,
+.page-template-page-tuition-php #sb-nav-close,
+.page-template-page-faculty-php #sb-nav-close,
+.page-template-page-organization-php #sb-nav-close,
+.page-template-page-coaching-php #sb-nav-close,
+.page-template-page-geotarget-php #sb-nav-close {
+  background: url(../../images/pop-up-close.png) no-repeat 0 0;
+}
+/*
+.page-id-4205 .callout-content{
+	top: 0px!important;
+}
+*/
+.page-template-page-coaching-online-php .callout-content,
+.page-template-page-tuition-php .callout-content,
+.page-template-page-coaching-php .callout-content,
+.page-template-page-geotarget-php .callout-content {
+  top: 0px!important;
+}
+#exploreTab .callout-content {
+  top: 75px!important;
+}
+.page-template-page-dropdown-list-php .content-header,
+.page-template-page-new-calendar-php .content-header {
+  position: relative;
+}
+.page-template-page-dropdown-list-php .featured-text,
+.page-template-page-new-calendar-php .featured-text {
+  position: absolute;
+  right: 5%;
+  top: 75px;
+  width: 45%;
+}
+.page-template-page-dropdown-list-php .featured-text h2,
+.page-template-page-new-calendar-php .featured-text h2 {
+  color: #000;
+  margin-bottom: 20px;
+}
+.page-template-page-dropdown-list-php .featured-text p,
+.page-template-page-new-calendar-php .featured-text p,
+.page-template-page-dropdown-list-php .featured-text select,
+.page-template-page-new-calendar-php .featured-text select {
+  margin-left: 20px;
+}
+.page-template-page-new-calendar-php .dropdown-content p {
+  padding-bottom: 10px;
+}
+.page-template-page-new-calendar-php .dropdown-content a.button {
+  line-height: 16px;
+  margin-bottom: 15px;
+}
+.page-template-page-new-calendar-php .dropdown-content a.button.time-reveal {
+  background: url("../../images/bg-button-gray.png") repeat scroll 0 0 transparent;
+}
+.page-template-page-coaching-online-php #infoTab a.button.time-reveal {
+  background: url("../../images/bg-button-gray.png") repeat scroll 0 0 transparent;
+}
+.page-template-page-coaching-online-php #infoTab a.button {
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+.page-template-page-coaching-online-php #mentorContent {
+  padding-bottom: 60px;
+}
+.page-template-page-coaching-online-php .margin-h3 {
+  margin-bottom: 10px;
+}
+.page-template-page-module-v-php .post_content {
+  background: white;
+  border: 1px solid #e2e2e2;
+  padding-bottom: 50px;
+}
+.page-template-page-module-v-php .post_content > img {
+  width: 100%;
+}
+.page-template-page-module-v-php .the-content {
+  padding: 50px 80px;
+}
+.page-template-page-module-v-php .the-content h2 {
+  color: black;
+  margin-bottom: 25px;
+}
+.page-template-page-module-v-php .the-content .type-geo-calendar + .type-geo-calendar {
+  padding-top: 30px;
+}
+/* 1250px
+- last three menus to the right
+*/
+@media screen and (max-width: 1250px) {
+  div.header.top #main-nav > li:nth-of-type(4) .sub-menu,
+  div.header.top #main-nav > li:nth-of-type(5) .sub-menu,
+  div.header.top #main-nav > li:nth-of-type(6) .sub-menu {
+    left: auto;
+    right: 0;
+  }
+}
+/* 1000px
+- call us stacked
+
+*/
+@media screen and (max-width: 1000px) {
+  div.header.top .search-box {
+    left: 170px;
+    position: absolute;
+    top: 10px;
+  }
+  div.header.top .phone {
+    text-align: right;
+    width: 100%;
+  }
+  div.header.top .top-menu {
+    width: 100%;
+    float: right;
+    max-width: 470px;
+    margin-right: 15px;
+  }
+  div.header.top #skip-to-menu + .nine.columns {
+    width: 100%;
+  }
+  div.header.top #skip-to-menu + .nine.columns #main-nav {
+    margin-top: 0;
+    text-align: center;
+  }
+}
+/* 950px
+ - Fix some absolute styles
+*/@media screen and (max-width: 950px) {
+  .page-template-page-dropdown-list-php .featured-text,
+  .page-template-page-new-calendar-php .featured-text {
+    margin-top: 10px;
+    position: static;
+    width: auto;
+  }
+  .page-template-page-dropdown-list-php .featured-text p,
+  .page-template-page-new-calendar-php .featured-text p,
+  .page-template-page-dropdown-list-php .featured-text select,
+  .page-template-page-new-calendar-php .featured-text select {
+    margin-left: 0;
+  }
+}
+/* 925px
+- tabsCallout enquire button on top
+*/
+@media screen and (max-width: 925px) {
+  .tabsCallout a.button.green {
+    position: static;
+    left: auto;
+    top: auto;
+  }
+  .tabsCallout .tabsCallout-button {
+    width: 100%;
+    text-align: center;
+  }
+  .tabsCallout .tabs {
+    margin: 20px 0;
+  }
+  .tabsCallout dl.tabs dd a {
+    padding: 0 8px;
+  }
+}
+/* 900px
+ - Callout responsiveness
+*/@media screen and (max-width: 900px) {
+  .page-template-page-coaching-online-php .callouts .callout .callout-image,
+  .page-template-page-tuition-php .callouts .callout .callout-image,
+  .page-template-page-coaching-php .callouts .callout .callout-image,
+  .page-template-page-business-php .callouts .callout .callout-image,
+  .page-template-page-geotarget-php .callouts .callout .callout-image {
+    float: none;
+  }
+  .page-template-page-coaching-online-php .callouts .callout .callout-content,
+  .page-template-page-tuition-php .callouts .callout .callout-content,
+  .page-template-page-coaching-php .callouts .callout .callout-content,
+  .page-template-page-business-php .callouts .callout .callout-content,
+  .page-template-page-geotarget-php .callouts .callout .callout-content {
+    float: none;
+    padding-top: 25px;
+    position: static;
+    width: auto;
+  }
+  .page-template-page-coaching-online-php .callouts .callout .callout-content h2,
+  .page-template-page-tuition-php .callouts .callout .callout-content h2,
+  .page-template-page-coaching-php .callouts .callout .callout-content h2,
+  .page-template-page-business-php .callouts .callout .callout-content h2,
+  .page-template-page-geotarget-php .callouts .callout .callout-content h2,
+  .page-template-page-coaching-online-php .callouts .callout .callout-content img,
+  .page-template-page-tuition-php .callouts .callout .callout-content img,
+  .page-template-page-coaching-php .callouts .callout .callout-content img,
+  .page-template-page-business-php .callouts .callout .callout-content img,
+  .page-template-page-geotarget-php .callouts .callout .callout-content img {
+    padding-left: 25px;
+  }
+  .page-template-page-coaching-online-php .callouts .callout:nth-of-type(2n) .callout-content,
+  .page-template-page-tuition-php .callouts .callout:nth-of-type(2n) .callout-content,
+  .page-template-page-coaching-php .callouts .callout:nth-of-type(2n) .callout-content,
+  .page-template-page-business-php .callouts .callout:nth-of-type(2n) .callout-content,
+  .page-template-page-geotarget-php .callouts .callout:nth-of-type(2n) .callout-content {
+    padding-left: 0;
+    padding-right: 25px;
+  }
+}
+/* 850px
+- slider buttons
+*/
+@media screen and (max-width: 850px) {
+  .flexslider .slides li .slider-text {
+    top: auto;
+    bottom: 25px;
+  }
+}
+/* 800px
+- Padding
+*/
+@media screen and (max-width: 800px) {
+  .page-template-page-continuing-education-php .post_content .program {
+    padding: 0 25px 50px;
+  }
+  div.header.top #main-nav > li {
+    padding: 10px 20px 10px 0;
+  }
+}
+/* 768px
+- padding width .the-content
+*/
+@media screen and (max-width: 768px) {
+  .the-content {
+    padding: 0 25px !important;
+  }
+  .page-template-page-dropdown-list-php .type-page .featured-text,
+  .page-template-page-new-calendar-php .type-page .featured-text {
+    padding: 25px;
+  }
+}
+/* 767px
+- home page callouts refloated.
+*/
+@media screen and (max-width: 767px) {
+  div.header.top .search-box {
+    left: 15px;
+    position: absolute;
+    top: 10px;
+  }
+  .logo h1 {
+    padding-bottom: 0;
+  }
+  div.top.header {
+    text-align: center;
+  }
+  div.top.header .phone {
+    text-align: center;
+  }
+  div.top.header .top-menu {
+    float: none;
+    margin: 15px auto;
+  }
+  .home .callouts .four.columns {
+    width: 50% !important;
+    float: left;
+  }
+  .home .recent-blog .five.columns {
+    padding-bottom: 15px;
+    left: auto;
+  }
+  .home .recent-blog .flexslider .flex-direction-nav {
+    bottom: -38px;
+    top: auto;
+  }
+  .home .bestseller .six.columns {
+    padding-bottom: 25px;
+  }
+  #mentorContent .mentors {
+    width: 33.333% !important;
+    float: left;
+    text-align: center;
+  }
+  .page-template-page-homepage-php .callouts .four.columns,
+  .home .callouts .four.columns {
+    width: 50% !important;
+    float: left;
+  }
+  .page-template-page-homepage-php .callouts .four.columns:nth-of-type(2n+1),
+  .home .callouts .four.columns:nth-of-type(2n+1) {
+    clear: both;
+  }
+  .page-template-page-homepage-php .callouts .four.columns:nth-of-type(3n+1),
+  .home .callouts .four.columns:nth-of-type(3n+1) {
+    clear: none;
+  }
+  .page-template-page-homepage-php .callouts .four.columns:last-child,
+  .home .callouts .four.columns:last-child {
+    float: left;
+  }
+  footer[role="contentinfo"] .twitter-list {
+    width: 100%;
+  }
+  footer[role="contentinfo"] .twitter-list h5 {
+    text-align: center;
+  }
+  footer[role="contentinfo"] .social-list,
+  footer[role="contentinfo"] .contact-form {
+    width: 50% !important;
+    float: left !important;
+    text-align: center;
+  }
+  footer[role="contentinfo"] .social-list h5,
+  footer[role="contentinfo"] .contact-form h5 {
+    text-align: center;
+  }
+}
+/* 750px
+- buttonized tabs
+*/
+@media screen and (max-width: 750px) {
+  .tabsCallout dl.tabs {
+    background: none;
+    box-shadow: none;
+    border: none;
+    height: auto;
+  }
+  .tabsCallout dl.tabs dd {
+    width: 33.333%;
+    text-align: center;
+    height: auto;
+    padding-bottom: 5px;
+    border: none;
+  }
+  .tabsCallout dl.tabs dd a {
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    /* Font Settings */
+
+    font-family: "museo-slab", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: .875em;
+    color: white;
+    text-decoration: none;
+    /* Background color and Gradient and Border */
+
+    background: url(../../images/bg-button-orange.png) repeat;
+    border: none;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    text-align: center;
+    min-width: 150px;
+    /* Corners, Borders, and Padding */
+
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding: 5px  25px;
+    line-height: 24px;
+    background: url(../../images/bg-button-gray.png) repeat;
+    line-height: 1.9;
+  }
+  .tabsCallout dl.tabs dd a:hover {
+    color: white;
+    background: url(../../images/bg-button-green.png) repeat;
+  }
+  .tabsCallout dl.tabs dd a:active {
+    top: 2px;
+  }
+  .tabsCallout dl.tabs dd a:hover {
+    background: url(../../images/bg-button-orange.png) repeat;
+  }
+  .footer-image .featured-text {
+    left: auto !important;
+    max-width: 100%;
+  }
+}
+/* 700px
+- SKIP TO FOOTER
+*/
+@media screen and (max-width: 700px) {
+  .top-menu,
+  #main-nav {
+    display: none;
+  }
+  #skip-to-menu,
+  #responsive-footer {
+    display: block;
+  }
+  #skip-to-menu {
+    margin: 25px 0;
+  }
+  #skip-to-menu a {
+    display: block;
+    margin: 0 25px;
+  }
+  .page-template-page-homepage-php .featured,
+  .home .featured {
+    display: none;
+  }
+}
+/* 650px
+- tabs 2 buttons wide
+*/
+@media screen and (max-width: 650px) {
+  .page-template-page-coaching-online-php .tabsCallout,
+  .page-template-page-tuition-php .tabsCallout,
+  .page-template-page-business-php .tabsCallout,
+  .page-template-page-coaching-php .tabsCallout,
+  .page-template-page-geotarget-php .tabsCallout {
+    padding: 0;
+  }
+  .page-template-page-coaching-online-php .tabsCallout dl.tabs dd,
+  .page-template-page-tuition-php .tabsCallout dl.tabs dd,
+  .page-template-page-business-php .tabsCallout dl.tabs dd,
+  .page-template-page-coaching-php .tabsCallout dl.tabs dd,
+  .page-template-page-geotarget-php .tabsCallout dl.tabs dd {
+    width: 50%;
+    text-align: center;
+    height: auto;
+    padding-bottom: 5px;
+    border: none;
+  }
+  .page-template-page-coaching-online-php .tabsCallout dl.tabs dd a,
+  .page-template-page-tuition-php .tabsCallout dl.tabs dd a,
+  .page-template-page-business-php .tabsCallout dl.tabs dd a,
+  .page-template-page-coaching-php .tabsCallout dl.tabs dd a,
+  .page-template-page-geotarget-php .tabsCallout dl.tabs dd a {
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    /* Font Settings */
+
+    font-family: "museo-slab", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: .875em;
+    color: white;
+    text-decoration: none;
+    /* Background color and Gradient and Border */
+
+    background: url(../../images/bg-button-orange.png) repeat;
+    border: none;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    text-align: center;
+    min-width: 150px;
+    /* Corners, Borders, and Padding */
+
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding: 5px  25px;
+    line-height: 24px;
+    background: url(../../images/bg-button-gray.png) repeat;
+    line-height: 1.9;
+  }
+  .page-template-page-coaching-online-php .tabsCallout dl.tabs dd a:hover,
+  .page-template-page-tuition-php .tabsCallout dl.tabs dd a:hover,
+  .page-template-page-business-php .tabsCallout dl.tabs dd a:hover,
+  .page-template-page-coaching-php .tabsCallout dl.tabs dd a:hover,
+  .page-template-page-geotarget-php .tabsCallout dl.tabs dd a:hover {
+    color: white;
+    background: url(../../images/bg-button-green.png) repeat;
+  }
+  .page-template-page-coaching-online-php .tabsCallout dl.tabs dd a:active,
+  .page-template-page-tuition-php .tabsCallout dl.tabs dd a:active,
+  .page-template-page-business-php .tabsCallout dl.tabs dd a:active,
+  .page-template-page-coaching-php .tabsCallout dl.tabs dd a:active,
+  .page-template-page-geotarget-php .tabsCallout dl.tabs dd a:active {
+    top: 2px;
+  }
+  .page-template-page-coaching-online-php .tabsCallout dl.tabs dd a:hover,
+  .page-template-page-tuition-php .tabsCallout dl.tabs dd a:hover,
+  .page-template-page-business-php .tabsCallout dl.tabs dd a:hover,
+  .page-template-page-coaching-php .tabsCallout dl.tabs dd a:hover,
+  .page-template-page-geotarget-php .tabsCallout dl.tabs dd a:hover {
+    background: url(../../images/bg-button-orange.png) repeat;
+  }
+  .page-template-page-coaching-online-php .tabsCallout .tabs-content,
+  .page-template-page-tuition-php .tabsCallout .tabs-content,
+  .page-template-page-business-php .tabsCallout .tabs-content,
+  .page-template-page-coaching-php .tabsCallout .tabs-content,
+  .page-template-page-geotarget-php .tabsCallout .tabs-content {
+    margin: 0;
+    padding: 15px;
+  }
+}
+/* 600px
+- #main no padding
+*/
+@media screen and (max-width: 600px) {
+  .twelve.columns.bestseller,
+  .twelve.columns.recent-blog {
+    padding-left: 0;
+  }
+  .twelve.columns.bestseller .book-title,
+  .twelve.columns.recent-blog .book-title {
+    padding-left: 15px;
+  }
+  .search-box {
+    display: none;
+  }
+  #main[role="main"] {
+    padding: 0;
+  }
+  #main[role="main"] .page-title {
+    padding-left: 25px;
+  }
+  .single #main[role="main"],
+  .blog #main[role="main"] {
+    padding: 0 15px;
+  }
+  .page-id-36 .type-page .post_content .gform_wrapper {
+    max-width: 100%;
+  }
+}
+/* 550px
+- tabs 2 buttons wide
+*/
+@media screen and (max-width: 550px) {
+  .tabsCallout dl.tabs dd {
+    width: 100%;
+  }
+}
+/* 525px
+- home page callouts refloated.
+*/
+@media screen and (max-width: 525px) {
+  .home .callouts .four.columns {
+    width: 100% !important;
+    float: none;
+    text-align: center;
+  }
+  .page-template-page-coaching-online-php .sub-callout,
+  .page-template-page-tuition-php .sub-callout,
+  .page-template-page-coaching-php .sub-callout,
+  .page-template-page-business-php .sub-callout,
+  .page-template-page-geotarget-php .sub-callout {
+    padding: 50px 25px;
+  }
+  .page-template-page-coaching-online-php .sub-callout p,
+  .page-template-page-tuition-php .sub-callout p,
+  .page-template-page-coaching-php .sub-callout p,
+  .page-template-page-business-php .sub-callout p,
+  .page-template-page-geotarget-php .sub-callout p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  footer[role="contentinfo"] .twitter-list {
+    width: 100%;
+  }
+  footer[role="contentinfo"] .twitter-list h5 {
+    text-align: center;
+  }
+  footer[role="contentinfo"] .social-list,
+  footer[role="contentinfo"] .contact-form {
+    width: 100% !important;
+    float: none !important;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  #mentorContent .mentors {
+    width: 50% !important;
+    float: left;
+    text-align: center;
+  }
+  .page-template-page-homepage-php .callouts .four.columns,
+  .home .callouts .four.columns {
+    width: 100% !important;
+    float: left;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .page-template-page-homepage-php .callouts .four.columns:nth-of-type(2n+1),
+  .home .callouts .four.columns:nth-of-type(2n+1) {
+    clear: none;
+  }
+  .page-template-page-homepage-php .callouts .four.columns:nth-of-type(3n+1),
+  .home .callouts .four.columns:nth-of-type(3n+1) {
+    clear: none;
+  }
+  .page-template-page-homepage-php .callouts .four.columns:last-child,
+  .home .callouts .four.columns:last-child {
+    float: left;
+  }
+}
+/* 480px
+ - Mobile Tab Fix
+*/
+@media screen and (max-width: 480px) {
+  .page-template-page-coaching-online-php .tabsCallout dl.tabs dd,
+  .page-template-page-tuition-php .tabsCallout dl.tabs dd,
+  .page-template-page-business-php .tabsCallout dl.tabs dd,
+  .page-template-page-coaching-php .tabsCallout dl.tabs dd,
+  .page-template-page-geotarget-php .tabsCallout dl.tabs dd {
+    width: 100%;
+  }
+}
+/* 450px
+- week by week outline
+*/
+@media screen and (max-width: 450px) {
+  .page-template-page-coaching-online-php .timeline article .month,
+  .page-template-page-tuition-php .timeline article .month,
+  .page-template-page-business-php .timeline article .month,
+  .page-template-page-coaching-php .timeline article .month,
+  .page-template-page-geotarget-php .timeline article .month,
+  .page-template-page-coaching-online-php .timeline article .week,
+  .page-template-page-tuition-php .timeline article .week,
+  .page-template-page-business-php .timeline article .week,
+  .page-template-page-coaching-php .timeline article .week,
+  .page-template-page-geotarget-php .timeline article .week {
+    float: none;
+    position: static;
+    width: 100%;
+  }
+}
+/* 400px
+- single employee
+*/
+@media screen and (max-width: 400px) {
+  #mentorContent .mentors {
+    width: 100% !important;
+    float: left;
+    text-align: center;
+  }
+}
+
+.fb-share-button > span {
+	vertical-align: initial !important;
+}

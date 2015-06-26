@@ -1,0 +1,115 @@
+/* Artfully masterminded by ZURB  */
+
+/* --------------------------------------------------
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+Coaching
+----------------------------------------- */
+.more-content {
+	display: none;
+	
+}
+
+.button.hide, .button.green.hide{
+	display: none;
+}
+
+/* -----------------------------------------
+   Geo location page
+----------------------------------------- */
+
+.tabsCallout dl.tabs dd a {
+	font-size: 12px; 
+}
+
+.tabsCallout dl.tabs {
+	margin: 20px 10px; 
+}
+
+.page-template-page-geotarget-php .callouts {
+	margin-bottom: 20px; 
+}
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+/*
+.dropdown-content a.button {
+	line-height: 16px; 
+	background: url("../../images/bg-button-gray.png") repeat scroll 0 0 transparent;
+}
+*/
+
+.time-widget {
+	display: none;
+}
+
+/* -----------------------------------------
+   New Geo Slider css
+----------------------------------------- */
+.featured{
+	background: #F4F4F2; 
+}
+.geoslider {
+	background: url(../images/bg_image.jpg) no-repeat center center; 
+	height: 320px; 
+	opacity: 0;
+	max-width: 1318px;  
+}
+.geoslider .navigation-container {
+	width: 1104px;
+	position: relative; 
+	top: -175px;  
+}
+
+.geoslider .slides {
+	width: 970px; 
+}
+.geoslider.flexslider .slides li .slider-text {
+    top: 220px;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+.geoslider .flex-direction-nav a {
+	opacity: 1;
+	width: 67px; 
+	height: 67px;  
+}
+.geoslider .flex-direction-nav .flex-prev {
+	left: 0; 
+}
+.geoslider .flex-direction-nav .flex-next {
+	right: 0; 
+}
+.page-template-page-homepage-php .featured {
+    background: url("../images/bg-divider.jpg") no-repeat scroll center bottom #F4F4F2 !important;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+.geoslider .flex-direction-nav .flex-next { background: url(../images/right-arrow.png) no-repeat; }
+.geoslider .flex-direction-nav .flex-prev { background: url(../images/left-arrow.png) no-repeat; }
+
+@media screen and (max-width: 1110px){
+	.geoslider .navigation-container {
+		width: 970px;
+	}
+}
+@media screen and (max-width: 969px){
+	.geoslider {
+		max-width: 970px;
+		opacity: 0 !important; 
+		height: 0; 
+		
+	}
+	.geoslider .slider-img {
+	    height: 0;
+	}
+}

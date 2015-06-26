@@ -1,0 +1,51 @@
+/*---------------------------------------------------
+    RSS Aggregator CSS
+-----------------------------------------------------*/
+
+
+#rss-heading {
+	padding-bottom: 20px;
+	font-weight: bold;
+}
+
+.rss-feed {
+	clear: both;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	/*border-bottom: 3px solid #eee;*/
+}
+
+.feed-image img {
+	vertical-align: text-top;
+	padding: 10px;
+	float: left;
+	width: 100%;
+}
+
+.feed-text {
+	display:inline;
+}
+
+.feed-title a {
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	font-size: 16px;
+}
+
+.feed-content {
+	display:block;
+	font-size: 14px;
+}
+
+.feed-author {
+	font-size: 12px;
+}
+.feed-date {
+	font-size: 12px;
+}
+.feed-source {
+	font-size: 12px;
+}
+				
