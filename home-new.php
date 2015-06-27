@@ -215,7 +215,7 @@ var term_city = mmjsCity.replace(/\s+/g, '-').toLowerCase();
 									<div class="callout" id="default-callout">
 										<?php $image = wp_get_attachment_image_src(get_sub_field('image'), 'medium'); ?>
 										<a href="<?php the_sub_field('link'); ?>">
-											<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life Coach Certification" width="300" height="200" />
+											<img class="slider-img" src="<?php echo $image[0]; ?>" width="300" height="200" />
 										</a>
 										<h3><?php echo the_sub_field('title'); ?></h3>
 										<?php echo the_sub_field('content'); ?>

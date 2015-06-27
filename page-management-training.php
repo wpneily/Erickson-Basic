@@ -221,7 +221,7 @@ Template Name: Management Training - with RSS
 									<div class="callout" id="default-callout">
 										<?php $image = wp_get_attachment_image_src(get_sub_field('image'), 'medium'); ?>
 										<a href="<?php the_sub_field('link'); ?>">
-											<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life Coach Certification" width="300" height="200" />
+											<img class="slider-img" src="<?php echo $image[0]; ?>" width="300" height="200" />
 										</a>
 										<h3><?php echo the_sub_field('title'); ?></h3>
 										<?php echo the_sub_field('content'); ?>
@@ -237,7 +237,7 @@ Template Name: Management Training - with RSS
 
 										<?php $image = wp_get_attachment_image_src(get_sub_field('image'), 'medium'); ?>
 										<a href="<?php the_sub_field('link'); ?>">
-											<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life Coach Certification" width="300" height="200" />
+											<img class="slider-img" src="<?php echo $image[0]; ?>" width="300" height="200" />
 										</a>
 										<h3><?php echo the_sub_field('title'); ?></h3>
 										<?php echo the_sub_field('content'); ?>
@@ -257,8 +257,8 @@ Template Name: Management Training - with RSS
 					</div>
 			    </div>
 
-			    <?php if(get_field('show_blog_post_slider')) : ?>
-			    <div class="twelve columns recent-blog">
+			    <?php// if(get_field('show_blog_post_slider')) : ?>
+			    <!--<div class="twelve columns recent-blog">-->
 			    	<!--<div class="flexslider">
 					    <ul class="slides">
 							<?php
@@ -303,10 +303,10 @@ Template Name: Management Training - with RSS
 							<?php wp_reset_query(); ?>
 					    </ul> <!-- slides close --*>
 			    	</div>--> <!-- flexslider close -->
-			    </div>
-			    <?php endif; ?>
+			    <!--</div>-->
+			    <?php// endif; ?>
 
-			    <div class="row">
+			    <!--<div class="row">
 					<div class="eight columns">
 					<?php
 						if (get_field('feed')) {
@@ -324,7 +324,7 @@ Template Name: Management Training - with RSS
 						</div>
 					</div>
 
-				</div>
+				</div>-->
 
 				<?php //get_sidebar(); // sidebar 1 ?>
 
