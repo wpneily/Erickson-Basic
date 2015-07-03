@@ -1,7 +1,7 @@
 <?php
 /* Welcome to Bones :)
 This is the core Bones file where most of the
-main functions & features reside. If you have 
+main functions & features reside. If you have
 any custom functions, it's best to put them
 in the functions.php file.
 
@@ -27,17 +27,19 @@ function bones_head_cleanup() {
 	remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );             // start link
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 ); // Links for Adjacent Posts
 	remove_action( 'wp_head', 'wp_generator' );                           // WP version
+/*
 	if (!is_admin()) {
 		wp_deregister_script('jquery');                                   // De-Register jQuery
 		wp_register_script('jquery', '', '', '', true);                   // It's already in the Header
-	}	
+	}
+*/
 }
 	// launching operation cleanup
 	add_action('init', 'bones_head_cleanup');
 	// remove WP version from RSS
 	function bones_rss_version() { return ''; }
 	add_filter('the_generator', 'bones_rss_version');
-	
+
 // loading jquery reply elements on single pages automatically
 function bones_queue_js(){ if (!is_admin()){ if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) wp_enqueue_script( 'comment-reply' ); }
 }
@@ -52,7 +54,7 @@ function bones_queue_js(){ if (!is_admin()){ if ( is_singular() AND comments_ope
 // 	return '...  <a href="'. get_permalink($post->ID) . '" class="more-link button nice radius" title="Read '.get_the_title($post->ID).'">Read more &raquo;</a>';
 // }
 // add_filter('excerpt_more', 'bones_excerpt_more');
-	
+
 // Adding WP 3+ Functions & Theme Support
 function bones_theme_support() {
 	add_theme_support( 'post-thumbnails' );      // wp thumbnails (sizes handled in functions.php)
@@ -62,38 +64,38 @@ function bones_theme_support() {
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
 	// adding post format support
 	add_theme_support( 'post-formats',      // post formats
-		array( 
+		array(
 			'aside',   // title less blurb
 			'gallery', // gallery of images
 			'link',    // quick link to other site
 			'image',   // an image
 			'quote',   // a quick quote
 			'status',  // a Facebook like status update
-			'video',   // video 
+			'video',   // video
 			'audio',   // audio
-			'chat'     // chat transcript 
+			'chat'     // chat transcript
 		)
-	);	
+	);
 	add_theme_support( 'menus' );            // wp menus
 	register_nav_menus(                      // wp3+ menus
-		array( 
+		array(
 			'main_nav' => 'The Main Menu',   // main nav in header
 			'top_links' => 'Top Links' // secondary nav in footer
 		)
-	);	
+	);
 }
 
 // launching this stuff after theme setup
-add_action('after_setup_theme','bones_theme_support');	
+add_action('after_setup_theme','bones_theme_support');
 // adding sidebars to Wordpress (these are created in functions.php)
 add_action( 'widgets_init', 'bones_register_sidebars' );
 // adding the bones search form (created in functions.php)
 add_filter( 'get_search_form', 'bones_wpsearch' );
-	
+
 function bones_main_nav() {
 	// display the wp3 menu if available
-    wp_nav_menu( 
-    	array( 
+    wp_nav_menu(
+    	array(
     		'menu' => 'main_nav', /* menu name */
     		'menu_class' => 'top-nav nav-bar hide-for-small',
     		'theme_location' => 'main_nav', /* where in the theme it's assigned */
@@ -107,8 +109,8 @@ function bones_main_nav() {
 
 function bones_mobile_nav() {
 	// display the wp3 menu if available
-    wp_nav_menu( 
-    	array( 
+    wp_nav_menu(
+    	array(
     		'menu' => 'mobile_nav', /* menu name */
     		'menu_class' => 'side-nav tabs vertical',
     		'theme_location' => 'main_nav', /* where in the theme it's assigned */
@@ -119,7 +121,7 @@ function bones_mobile_nav() {
     );
 }
 
-function bones_footer_links() { 
+function bones_footer_links() {
 	// display the wp3 menu if available
     wp_nav_menu(
     	array(
@@ -132,21 +134,21 @@ function bones_footer_links() {
     	)
 	);
 }
- 
+
 // this is the fallback for header menu
-function bones_main_nav_fallback() { 
+function bones_main_nav_fallback() {
 	// not calling this in case of multiple level pages - hope to add dropdown menu as an enhancement
-	//wp_page_menu( 'show_home=Home&menu_class=menu' ); 
+	//wp_page_menu( 'show_home=Home&menu_class=menu' );
 }
 
 // this is the fallback for footer menu
-function bones_footer_links_fallback() { 
-	/* you can put a default here if you like */ 
+function bones_footer_links_fallback() {
+	/* you can put a default here if you like */
 }
 
 
 /****************** PLUGINS & EXTRA FEATURES **************************/
-	
+
 // Related Posts Function (call using bones_related_posts(); )
 function bones_related_posts() {
 	echo '<ul id="bones-related-posts">';
@@ -163,7 +165,7 @@ function bones_related_posts() {
         if($related_posts) {
         	foreach ($related_posts as $post) : setup_postdata($post); ?>
 	           	<li class="related_post"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-	        <?php endforeach; } 
+	        <?php endforeach; }
 	    else { ?>
             <li class="no_related_post">No Related Posts Yet!</li>
 		<?php }
@@ -203,13 +205,13 @@ function page_navi($before = '', $after = '') {
 	if($start_page <= 0) {
 		$start_page = 1;
 	}
-		
+
 	echo $before.'<ul class="pagination clearfix">'."";
 	if ($paged > 1) {
 		$first_page_text = "&laquo";
 		echo '<li class="prev"><a href="'.get_pagenum_link().'" title="First">'.$first_page_text.'</a></li>';
 	}
-		
+
 	echo '<li class="">';
 	previous_posts_link('&larr; Previous');
 	echo '</li>';
@@ -238,6 +240,6 @@ function filter_ptags_on_images($content){
 add_filter('the_content', 'filter_ptags_on_images');
 
 
-	
+
 
 ?>
