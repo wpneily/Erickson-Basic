@@ -19,34 +19,7 @@ Template Name: Homepage New
 
 
 
-<!--Take this out when it tests ok-->
-					<?php//
-//						$locations = get_terms('calendar-location', 'hide_empty=0&parent=203');
-//						$cities = array();
-//						foreach($locations as $location){
-//							$cities[]= $location->slug;
-//						}
-//						$region_terms = get_terms('calendar-region');
-//						$regions = array();
-//						foreach($region_terms as $region){
-//							$regions[] = $region ->name;
-//						}
-//						//new code - gets the regions from the repeater field
-//						if(get_field('slider')){
-//
-//							$set_cities = array();
-//							$set_regions = array();
-//							$set_countries = array();
-//							$slider_regions = get_field('slider');
-//							$the_regions = $slider_regions[0]['location_buttons'];
-//						foreach($the_regions as $region ){
-//							$set_cities[] = $region['region_location'];
-//							$set_regions[] = $region['region'];
-//						}
-//						}
-//					?>
 
-<!--End-->
 
 					<!-- Hook up the FlexSlider -->
 
@@ -141,10 +114,10 @@ Template Name: Homepage New
 											if( get_sub_field('geo_content') ):
 												while( has_sub_field('geo_content') ):
 										?>
-												<div class="callout hide <?php the_sub_field('city'); the_sub_field('region'); the_sub_field('country'); ?>">
+												<div class="callout hide<?php the_sub_field('city'); the_sub_field('region'); the_sub_field('country'); ?>">
 													<?php $image = wp_get_attachment_image_src(get_sub_field('geo_image'), 'medium'); ?>
 													<a href="<?php the_sub_field('geo_link'); ?>" >
-														<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life Coach Certification" width="300" height="200" />
+ 														<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life CCoach Certification" width="300" height="200" />
 													</a>
 													<h3><?php echo the_sub_field('geo_title'); ?></h3>
 													<?php echo the_sub_field('geo_content'); ?>
@@ -215,7 +188,7 @@ var term_city = mmjsCity.replace(/\s+/g, '-').toLowerCase();
 									<div class="callout" id="default-callout">
 										<?php $image = wp_get_attachment_image_src(get_sub_field('image'), 'medium'); ?>
 										<a href="<?php the_sub_field('link'); ?>">
-											<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life Coach Certification" width="300" height="200" />
+ 											<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life Coach Certification" width="300" height="200" /> 
 										</a>
 										<h3><?php echo the_sub_field('title'); ?></h3>
 										<?php echo the_sub_field('content'); ?>
@@ -231,7 +204,7 @@ var term_city = mmjsCity.replace(/\s+/g, '-').toLowerCase();
 
 										<?php $image = wp_get_attachment_image_src(get_sub_field('image'), 'medium'); ?>
 										<a href="<?php the_sub_field('link'); ?>">
-											<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life Coach Certification" width="300" height="200" />
+<!-- 											<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life Coach Certification" width="300" height="200" /> -->
 										</a>
 										<h3><?php echo the_sub_field('title'); ?></h3>
 										<?php echo the_sub_field('content'); ?>
@@ -252,79 +225,10 @@ var term_city = mmjsCity.replace(/\s+/g, '-').toLowerCase();
 			</div>
 
 
-			<!--Start Blog Post Slider - Shows a slider of blog posts-->
-			<?php if(get_field('show_blog_post_slider')) : ?>
-			<div class="twelve columns recent-blog">
-			<div class="flexslider">
-					<ul class="slides">
-							<?php
-								$temp = $wp_query;
-								$wp_query= null;
-								$wp_query = new WP_Query();
-								$wp_query->query('posts_per_page=5'.'&paged='.$paged);
-								while ($wp_query->have_posts()) : $wp_query->the_post();
-							?>
+			
 
 
-							<li id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-
-								<header class="row">
-									<div class="eight columns">
-										<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-										<p class="meta">
-											<?php _e("written by", "bonestheme"); ?> <?php the_author_posts_link(); ?>
-											<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time>
-											<?php comments_number('0 comments','1 comment','% comments'); ?>
-											<?php $comment_count = get_comment_count($post->ID); ?>
-											<?php if ($comment_count['approved'] > 0) { _e("latest ", "bonestheme"); echo time_ago();	} ?>
-										</p>
-									</div>
-									<div class="four columns">
-										<p>&nbsp;</p>
-									</div>
-								</header>
-
-								<section class="post_content clearfix row">
-									<div class="five columns">
-										<?php the_excerpt(); ?>
-										<p><a class="button secondary" href="<?php the_permalink(); ?>">read more</a></p>
-									</div>
-									<div class="six columns">
-										<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'recent-blog-image' ); ?></a>
-									</div>
-								</section>
-							</li>
-							<?php endwhile; ?>
-							<?php $wp_query = null; $wp_query = $temp;?>
-							<?php wp_reset_query(); ?>
-					</ul> <!-- slides close -->
-			</div>
-			<!-- flexslider close -->
-			</div>
-			<?php endif; ?>
-
-		<!--End Blog Post Slider-->
-
-
-			<div class="row">
-					<div class="eight columns">
-					<?php
-						if (get_field('feed')) {
-							include( get_template_directory() . '/library/rss-aggregator.php');
-						}
-					?>
-					</div>
-					<div class="four columns twitter-feed-management">
-					<h2 id="rss-heading"><?php if(get_field('twitter_page_title')){ the_field('twitter_page_title'); }?></h2>
-						<?php the_field('twitter_tag'); ?>
-
-
-						<div class="tweet2">
-
-						</div>
-					</div>
-
-				</div>
+			
 
 				<?php //get_sidebar(); // sidebar 1 ?>
 
