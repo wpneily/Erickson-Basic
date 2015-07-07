@@ -573,9 +573,9 @@ function show_template() {
 	function custom_admin_logo() {
 		echo '<style type="text/css">#header-logo { background-image: url('.get_bloginfo('template_directory').'/images/logo-admin.png) !important; background-size:auto;}</style>';
 	}
-	
+
 	function forge_youtube_id($link){
-	
+
 		$video_id = explode("?v=", $link); // For videos like http://www.youtube.com/watch?v=...
 		if (empty($video_id[1]))
 		    $video_id = explode("/v/", $link); // For videos like http://www.youtube.com/watch/v/..
@@ -3221,8 +3221,8 @@ function show_template() {
 //				'allow_null' => 0,
 //				'multiple' => 0,
 //			),
-			
-/****** Book Callout *******/			
+
+/****** Book Callout *******/
 //			Book Callout Here
 //array (
 //	'key' => 'field_54fe7fb2641e5',
