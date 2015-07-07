@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Homepage New
+Template Name: Homepage
 */
 ?>
 
@@ -189,9 +189,13 @@ var term_city = mmjsCity.replace(/\s+/g, '-').toLowerCase();
 										<?php $image = wp_get_attachment_image_src(get_sub_field('image'), 'medium'); ?>
 										<a href="<?php the_sub_field('link'); ?>">
 <<<<<<< HEAD
+<<<<<<< HEAD
 											<img class="slider-img" src="<?php echo $image[0]; ?>" width="300" height="200" />
 =======
  											<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life Coach Certification" width="300" height="200" /> 
+>>>>>>> dev
+=======
+ 											<img class="slider-img" src="<?php echo $image[0]; ?>" alt="ICF Life Coach Certification" width="300" height="200" />
 >>>>>>> dev
 										</a>
 										<h3><?php echo the_sub_field('title'); ?></h3>
@@ -229,10 +233,10 @@ var term_city = mmjsCity.replace(/\s+/g, '-').toLowerCase();
 			</div>
 
 
-			
 
 
-			
+
+
 
 				<?php //get_sidebar(); // sidebar 1 ?>
 
