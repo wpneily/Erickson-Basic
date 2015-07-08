@@ -3319,6 +3319,15 @@ function show_template() {
 					'group_no' => 0,
 				),
 			),
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-management-training.php',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
 		),
 		'options' => array (
 			'position' => 'normal',

@@ -10,31 +10,10 @@ Template Name: Management Training - with RSS
 			</div><!-- /End of .Container -->
 				<div class="featured" align="center">
 
-					<?php
-						$locations = get_terms('calendar-location', 'hide_empty=0&parent=203');
-						$cities = array();
-						foreach($locations as $location){
-							$cities[]= $location->slug;
-						}
-						$region_terms = get_terms('calendar-region');
-						$regions = array();
-						foreach($region_terms as $region){
-							$regions[] = $region ->name;
-						}
-						//new code - gets the regions from the repeater field
-						if(get_field('slider')){
 
-							$set_cities = array();
-							$set_regions = array();
-							$set_countries = array();
-							$slider_regions = get_field('slider');
-							$the_regions = $slider_regions[0]['location_buttons'];
-						    foreach($the_regions as $region ){
-							    $set_cities[] = $region['region_location'];
-							    $set_regions[] = $region['region'];
-						    }
-						}
-					?>
+
+
+
 
 					<!-- Hook up the FlexSlider -->
 
@@ -51,37 +30,14 @@ Template Name: Management Training - with RSS
 									jQuery('.geoslider').animate({opacity: 1}, 1000);
 								}
 							});
-							<?php
-								$js_array = json_encode($cities);
-								$js_regions = json_encode($regions);
-								$js_array = json_encode($set_cities);
-								$js_regions = json_encode($set_regions);
-								echo "var regions_array = ".$js_regions."; ";
-								echo "var locations_array = ". $js_array . ";\n";
-							?>
-								var region_check = false;
-								var default_link = jQuery('.default');
-								var term_city = mmjsCity.replace(/\s+/g, '-').toLowerCase();
-								var region = mmjsRegion;
-
-								if(jQuery.inArray(term_city, locations_array) != -1){
-
-									default_link.hide();
-									jQuery('.'+term_city).css('display', 'inline-block');
-									region_check = true;
-								}
-								if(region_check == false && jQuery.inArray(region, regions_array) != -1){
-									default_link.hide();
-									jQuery('.'+region).css('display', 'inline-block');
-									region_check = true;
-								}
+//
 						});
 					</script>
 
 
 					<div class="flexslider geoslider">
-					    <ul class="slides">
-				    	<?php if(get_field('slider')): ?>
+					<ul class="slides">
+				<?php if(get_field('slider')): ?>
 
 
 							<?php while(the_repeater_field('slider')): ?>
@@ -114,12 +70,14 @@ Template Name: Management Training - with RSS
 									</div>
 
 								</li>
-				 				<?php endwhile; ?>
+				<?php endwhile; ?>
 						<?php endif; ?>
-					    </ul>
+					</ul>
 
-					    <div class="navigation-container">
-					    </div>
+					<!--I do not know what this is. Added "Navigation Container" to the tag to see it on the front end-->
+					<div class="navigation-container"></div>
+
+
 					</div>
 
 				</div> <!-- end featured -->

@@ -793,7 +793,7 @@ div.header.top #main-nav li ul li a {
   background-clip: padding-box;
   padding: 7px  25px;
   background: #939393;
-  margin-top: 25px;
+/*   margin-top: -25px; */
   margin-right: 15px;
 }
 .flexslider .slides li .slider-text a.button:hover {
