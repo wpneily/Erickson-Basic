@@ -538,12 +538,16 @@ register_taxonomy('calendar-region',array (
   0 => 'geo-calendar',
 ),array( 'hierarchical' => true, 'label' => 'Regions','show_ui' => true,'query_var' => true,'rewrite' => array('slug' => ''),'singular_label' => 'Region') );
 
-
+// This code is used to show the template when viewing the site front end
+/*
 add_action('wp_head', 'show_template');
 function show_template() {
 	global $template;
 	print_r($template);
 }
+*/
+// End show template
+
 /* Logos */
 	function my_custom_login_logo() {
     echo '<style type="text/css">
