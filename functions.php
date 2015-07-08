@@ -4552,3 +4552,4 @@ function show_template() {
 		'menu_order' => 0,
 	));
 }
+define( 'ACF_LITE' , true );
