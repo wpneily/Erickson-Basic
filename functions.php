@@ -125,7 +125,7 @@ function theme_styles()
     wp_register_style( 'ie', get_template_directory_uri() . '/stylesheets/ie.css', array(), '3.0', 'all' );
     wp_register_style( 'dropmenu', get_template_directory_uri() . '/stylesheets/drop-down-style.css', array(), '3.0', 'all' );
     wp_register_style( 'flexslider', get_template_directory_uri() . '/stylesheets/flexslider.css', array(), '3.0', 'all' );
-     wp_register_style( 'Erickson-Basic', get_template_directory_uri() . '/stylesheets/css/main-style.css', array(), '3.0', 'all' );
+     wp_register_style( 'Erickson-Basic', get_template_directory_uri() . '/stylesheets/css/main-style.css', array(), '1.0', 'all' );
     wp_enqueue_style( 'open-sans' );
     wp_enqueue_style( 'foundation' );
     wp_enqueue_style( 'app' );
