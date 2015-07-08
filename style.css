@@ -1,12 +1,11 @@
 /*
 Theme Name: Erickson Basic
 Description: Theme for Erickson College Partner Sites.
-Version: 1.0.6
+Version: 1.0.7
 Author: Warren Neily
 Author URI: http://pistolsandwhiskey.com
-Template Version: 1.0.6
+Template Version: 1.0.7
 GitHub Theme URI: https://github.com/wpneily/Erickson-Basic
-Branch: master
 */
 
 /* layout */
@@ -126,7 +125,7 @@ ul.tabs li a {
 }
 
 /* typography */
-h1, h2, h3, h4, h5, h6{ font-family: 'Open Sans', sans-serif; font-weight: 300;}
+h1, h2, h3, h4, h5, h6{ /* font-family: 'Open Sans', sans-serif; font-weight: 300; */}
 
 .siteinfo h1{ font-weight: 800; }
 
