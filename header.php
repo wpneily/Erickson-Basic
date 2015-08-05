@@ -32,7 +32,12 @@
 		<script type="text/javascript" src="//use.typekit.net/svq6hru.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<!--  /TYPEKIT -->
-
+<script type='text/javascript'>
+	    jQuery(function($){
+	        $("#main-nav").dropmenu({});
+	        $("#top-nav").dropmenu({});
+	    });
+	</script>
 	</head>
 
 	<body <?php body_class(); ?>>
